@@ -1,0 +1,19 @@
+To train a new BDTG:
+
+> root -l
+> .x TMVARegression.C
+
+This creates a weight file which is stored at: weights/
+
+You can create the tree for the BDTG input with: Energy_studies_recoquant_iNUM.C 
+
+In order to reconstruct the energy:
+
+* If you have not trained your own BDTG 
+> mkdir weights/
+and copy TMVARegression_BDTG.weights.xml there.
+
+> root -l
+> .x TMVARegressionApplication.C
+
+This will create a .root file with histograms. The reconstructed energy is stored at the histogram named "BDTG".

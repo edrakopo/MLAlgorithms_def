@@ -1,0 +1,76 @@
+Using TensorFlow backend.
+/cvmfs/sft.cern.ch/lcg/releases/LCG_85swan2/root_numpy/4.5.1/x86_64-slc6-gcc49-opt/lib/python2.7/site-packages/root_numpy-4.5.1-py2.7-linux-x86_64.egg/root_numpy/_tree.py:372: RuntimeWarning: ignoring duplicate branch named 'i'
+  cache_size)
+/cvmfs/sft.cern.ch/lcg/releases/LCG_85swan2/root_numpy/4.5.1/x86_64-slc6-gcc49-opt/lib/python2.7/site-packages/root_numpy-4.5.1-py2.7-linux-x86_64.egg/root_numpy/_tree.py:372: RuntimeWarning: ignoring duplicate branch named 'neutrinoE'
+  cache_size)
+/cvmfs/sft.cern.ch/lcg/releases/LCG_85swan2/root_numpy/4.5.1/x86_64-slc6-gcc49-opt/lib/python2.7/site-packages/root_numpy-4.5.1-py2.7-linux-x86_64.egg/root_numpy/_tree.py:372: RuntimeWarning: ignoring duplicate branch named 'trueKE'
+  cache_size)
+/cvmfs/sft.cern.ch/lcg/releases/LCG_85swan2/root_numpy/4.5.1/x86_64-slc6-gcc49-opt/lib/python2.7/site-packages/root_numpy-4.5.1-py2.7-linux-x86_64.egg/root_numpy/_tree.py:372: RuntimeWarning: ignoring duplicate branch named 'recoE_lookup'
+  cache_size)
+/cvmfs/sft.cern.ch/lcg/releases/LCG_85swan2/root_numpy/4.5.1/x86_64-slc6-gcc49-opt/lib/python2.7/site-packages/root_numpy-4.5.1-py2.7-linux-x86_64.egg/root_numpy/_tree.py:372: RuntimeWarning: ignoring duplicate branch named 'total_PMTs_hits2'
+  cache_size)
+/cvmfs/sft.cern.ch/lcg/releases/LCG_85swan2/root_numpy/4.5.1/x86_64-slc6-gcc49-opt/lib/python2.7/site-packages/root_numpy-4.5.1-py2.7-linux-x86_64.egg/root_numpy/_tree.py:372: RuntimeWarning: ignoring duplicate branch named 'total_hits2'
+  cache_size)
+/cvmfs/sft.cern.ch/lcg/releases/LCG_85swan2/root_numpy/4.5.1/x86_64-slc6-gcc49-opt/lib/python2.7/site-packages/root_numpy-4.5.1-py2.7-linux-x86_64.egg/root_numpy/_tree.py:372: RuntimeWarning: ignoring duplicate branch named 'total_ring_PEs2'
+  cache_size)
+/cvmfs/sft.cern.ch/lcg/releases/LCG_85swan2/root_numpy/4.5.1/x86_64-slc6-gcc49-opt/lib/python2.7/site-packages/root_numpy-4.5.1-py2.7-linux-x86_64.egg/root_numpy/_tree.py:372: RuntimeWarning: ignoring duplicate branch named 'pot_length2'
+  cache_size)
+/cvmfs/sft.cern.ch/lcg/releases/LCG_85swan2/root_numpy/4.5.1/x86_64-slc6-gcc49-opt/lib/python2.7/site-packages/root_numpy-4.5.1-py2.7-linux-x86_64.egg/root_numpy/_tree.py:372: RuntimeWarning: ignoring duplicate branch named 'hits_pot_length2'
+  cache_size)
+/cvmfs/sft.cern.ch/lcg/releases/LCG_85swan2/root_numpy/4.5.1/x86_64-slc6-gcc49-opt/lib/python2.7/site-packages/root_numpy-4.5.1-py2.7-linux-x86_64.egg/root_numpy/_tree.py:372: RuntimeWarning: ignoring duplicate branch named 'recoDWallR2'
+  cache_size)
+/cvmfs/sft.cern.ch/lcg/releases/LCG_85swan2/root_numpy/4.5.1/x86_64-slc6-gcc49-opt/lib/python2.7/site-packages/root_numpy-4.5.1-py2.7-linux-x86_64.egg/root_numpy/_tree.py:372: RuntimeWarning: ignoring duplicate branch named 'recoDWallZ2'
+  cache_size)
+/cvmfs/sft.cern.ch/lcg/releases/LCG_85swan2/root_numpy/4.5.1/x86_64-slc6-gcc49-opt/lib/python2.7/site-packages/root_numpy-4.5.1-py2.7-linux-x86_64.egg/root_numpy/_tree.py:372: RuntimeWarning: ignoring duplicate branch named 'lambda_max_2'
+  cache_size)
+/cvmfs/sft.cern.ch/lcg/releases/LCG_85swan2/root_numpy/4.5.1/x86_64-slc6-gcc49-opt/lib/python2.7/site-packages/root_numpy-4.5.1-py2.7-linux-x86_64.egg/root_numpy/_tree.py:372: RuntimeWarning: ignoring duplicate branch named 'recoDWall_2'
+  cache_size)
+/cvmfs/sft.cern.ch/lcg/releases/LCG_85swan2/root_numpy/4.5.1/x86_64-slc6-gcc49-opt/lib/python2.7/site-packages/root_numpy-4.5.1-py2.7-linux-x86_64.egg/root_numpy/_tree.py:372: RuntimeWarning: ignoring duplicate branch named 'recoToWall_2'
+  cache_size)
+/cvmfs/sft.cern.ch/lcg/releases/LCG_85swan2/root_numpy/4.5.1/x86_64-slc6-gcc49-opt/lib/python2.7/site-packages/root_numpy-4.5.1-py2.7-linux-x86_64.egg/root_numpy/_tree.py:372: RuntimeWarning: ignoring duplicate branch named 'vtxTrackBias_2'
+  cache_size)
+/phys/linux/gcowan1/software/my_env/lib/python2.7/site-packages/sklearn/externals/joblib/hashing.py:211: FutureWarning: Numpy has detected that you (may be) writing to an array returned
+by numpy.diagonal or by selecting multiple fields in a structured
+array. This code will likely break in a future numpy release --
+see numpy.diagonal or arrays.indexing reference docs for details.
+The quick fix is to make an explicit copy (e.g., do
+arr.diagonal().copy() or arr[['f0','f1']].copy()).
+  self._getbuffer(obj_c_contiguous.view(self.np.uint8)))
+W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use SSE3 instructions, but these are available on your machine and could speed up CPU computations.
+W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use SSE4.1 instructions, but these are available on your machine and could speed up CPU computations.
+W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use SSE4.2 instructions, but these are available on your machine and could speed up CPU computations.
+W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use AVX instructions, but these are available on your machine and could speed up CPU computations.
+W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use AVX2 instructions, but these are available on your machine and could speed up CPU computations.
+W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use FMA instructions, but these are available on your machine and could speed up CPU computations.
+W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use SSE3 instructions, but these are available on your machine and could speed up CPU computations.
+W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use SSE4.1 instructions, but these are available on your machine and could speed up CPU computations.
+W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use SSE4.2 instructions, but these are available on your machine and could speed up CPU computations.
+W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use AVX instructions, but these are available on your machine and could speed up CPU computations.
+W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use AVX2 instructions, but these are available on your machine and could speed up CPU computations.
+W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use FMA instructions, but these are available on your machine and could speed up CPU computations.
+W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use SSE3 instructions, but these are available on your machine and could speed up CPU computations.
+W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use SSE4.1 instructions, but these are available on your machine and could speed up CPU computations.
+W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use SSE4.2 instructions, but these are available on your machine and could speed up CPU computations.
+W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use AVX instructions, but these are available on your machine and could speed up CPU computations.
+W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use AVX2 instructions, but these are available on your machine and could speed up CPU computations.
+W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use FMA instructions, but these are available on your machine and could speed up CPU computations.
+W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use SSE3 instructions, but these are available on your machine and could speed up CPU computations.
+W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use SSE4.1 instructions, but these are available on your machine and could speed up CPU computations.
+W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use SSE4.2 instructions, but these are available on your machine and could speed up CPU computations.
+W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use AVX instructions, but these are available on your machine and could speed up CPU computations.
+W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use AVX2 instructions, but these are available on your machine and could speed up CPU computations.
+W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use FMA instructions, but these are available on your machine and could speed up CPU computations.
+W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use SSE3 instructions, but these are available on your machine and could speed up CPU computations.
+W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use SSE4.1 instructions, but these are available on your machine and could speed up CPU computations.
+W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use SSE4.2 instructions, but these are available on your machine and could speed up CPU computations.
+W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use AVX instructions, but these are available on your machine and could speed up CPU computations.
+W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use AVX2 instructions, but these are available on your machine and could speed up CPU computations.
+W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use FMA instructions, but these are available on your machine and could speed up CPU computations.
+Best: -0.002150 using {'optimizer': 'Nadam'}
+-0.004163 (0.000222) with: {'optimizer': 'SGD'}
+-0.003000 (0.000612) with: {'optimizer': 'RMSprop'}
+-0.004067 (0.000122) with: {'optimizer': 'Adagrad'}
+-0.004094 (0.000131) with: {'optimizer': 'Adadelta'}
+-0.002420 (0.000024) with: {'optimizer': 'Adam'}
+-0.004140 (0.000045) with: {'optimizer': 'Adamax'}
+-0.002150 (0.000017) with: {'optimizer': 'Nadam'}

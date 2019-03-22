@@ -1,0 +1,1 @@
+FINALTMVARegApp_BDTG_ener_lilia_CCQE_1040_1100_NEWlookupsTEST_MYselectedVars_large_statTEST10000treesB20	 	Mean: 	-  1.59633	Sigma: 	5.35999	Lower Percentage: 	-7.55812	Upper Percentage: 	5.14141	Percentage in Sigma: 	0

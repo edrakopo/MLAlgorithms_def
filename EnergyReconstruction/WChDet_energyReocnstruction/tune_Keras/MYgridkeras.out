@@ -1,0 +1,377 @@
+Using TensorFlow backend.
+/cvmfs/sft.cern.ch/lcg/releases/LCG_85swan2/root_numpy/4.5.1/x86_64-slc6-gcc49-opt/lib/python2.7/site-packages/root_numpy-4.5.1-py2.7-linux-x86_64.egg/root_numpy/_tree.py:372: RuntimeWarning: ignoring duplicate branch named 'i'
+  cache_size)
+/cvmfs/sft.cern.ch/lcg/releases/LCG_85swan2/root_numpy/4.5.1/x86_64-slc6-gcc49-opt/lib/python2.7/site-packages/root_numpy-4.5.1-py2.7-linux-x86_64.egg/root_numpy/_tree.py:372: RuntimeWarning: ignoring duplicate branch named 'neutrinoE'
+  cache_size)
+/cvmfs/sft.cern.ch/lcg/releases/LCG_85swan2/root_numpy/4.5.1/x86_64-slc6-gcc49-opt/lib/python2.7/site-packages/root_numpy-4.5.1-py2.7-linux-x86_64.egg/root_numpy/_tree.py:372: RuntimeWarning: ignoring duplicate branch named 'trueKE'
+  cache_size)
+/cvmfs/sft.cern.ch/lcg/releases/LCG_85swan2/root_numpy/4.5.1/x86_64-slc6-gcc49-opt/lib/python2.7/site-packages/root_numpy-4.5.1-py2.7-linux-x86_64.egg/root_numpy/_tree.py:372: RuntimeWarning: ignoring duplicate branch named 'recoE_lookup'
+  cache_size)
+/cvmfs/sft.cern.ch/lcg/releases/LCG_85swan2/root_numpy/4.5.1/x86_64-slc6-gcc49-opt/lib/python2.7/site-packages/root_numpy-4.5.1-py2.7-linux-x86_64.egg/root_numpy/_tree.py:372: RuntimeWarning: ignoring duplicate branch named 'total_PMTs_hits2'
+  cache_size)
+/cvmfs/sft.cern.ch/lcg/releases/LCG_85swan2/root_numpy/4.5.1/x86_64-slc6-gcc49-opt/lib/python2.7/site-packages/root_numpy-4.5.1-py2.7-linux-x86_64.egg/root_numpy/_tree.py:372: RuntimeWarning: ignoring duplicate branch named 'total_hits2'
+  cache_size)
+/cvmfs/sft.cern.ch/lcg/releases/LCG_85swan2/root_numpy/4.5.1/x86_64-slc6-gcc49-opt/lib/python2.7/site-packages/root_numpy-4.5.1-py2.7-linux-x86_64.egg/root_numpy/_tree.py:372: RuntimeWarning: ignoring duplicate branch named 'total_ring_PEs2'
+  cache_size)
+/cvmfs/sft.cern.ch/lcg/releases/LCG_85swan2/root_numpy/4.5.1/x86_64-slc6-gcc49-opt/lib/python2.7/site-packages/root_numpy-4.5.1-py2.7-linux-x86_64.egg/root_numpy/_tree.py:372: RuntimeWarning: ignoring duplicate branch named 'pot_length2'
+  cache_size)
+/cvmfs/sft.cern.ch/lcg/releases/LCG_85swan2/root_numpy/4.5.1/x86_64-slc6-gcc49-opt/lib/python2.7/site-packages/root_numpy-4.5.1-py2.7-linux-x86_64.egg/root_numpy/_tree.py:372: RuntimeWarning: ignoring duplicate branch named 'hits_pot_length2'
+  cache_size)
+/cvmfs/sft.cern.ch/lcg/releases/LCG_85swan2/root_numpy/4.5.1/x86_64-slc6-gcc49-opt/lib/python2.7/site-packages/root_numpy-4.5.1-py2.7-linux-x86_64.egg/root_numpy/_tree.py:372: RuntimeWarning: ignoring duplicate branch named 'recoDWallR2'
+  cache_size)
+/cvmfs/sft.cern.ch/lcg/releases/LCG_85swan2/root_numpy/4.5.1/x86_64-slc6-gcc49-opt/lib/python2.7/site-packages/root_numpy-4.5.1-py2.7-linux-x86_64.egg/root_numpy/_tree.py:372: RuntimeWarning: ignoring duplicate branch named 'recoDWallZ2'
+  cache_size)
+/cvmfs/sft.cern.ch/lcg/releases/LCG_85swan2/root_numpy/4.5.1/x86_64-slc6-gcc49-opt/lib/python2.7/site-packages/root_numpy-4.5.1-py2.7-linux-x86_64.egg/root_numpy/_tree.py:372: RuntimeWarning: ignoring duplicate branch named 'lambda_max_2'
+  cache_size)
+/cvmfs/sft.cern.ch/lcg/releases/LCG_85swan2/root_numpy/4.5.1/x86_64-slc6-gcc49-opt/lib/python2.7/site-packages/root_numpy-4.5.1-py2.7-linux-x86_64.egg/root_numpy/_tree.py:372: RuntimeWarning: ignoring duplicate branch named 'recoDWall_2'
+  cache_size)
+/cvmfs/sft.cern.ch/lcg/releases/LCG_85swan2/root_numpy/4.5.1/x86_64-slc6-gcc49-opt/lib/python2.7/site-packages/root_numpy-4.5.1-py2.7-linux-x86_64.egg/root_numpy/_tree.py:372: RuntimeWarning: ignoring duplicate branch named 'recoToWall_2'
+  cache_size)
+/cvmfs/sft.cern.ch/lcg/releases/LCG_85swan2/root_numpy/4.5.1/x86_64-slc6-gcc49-opt/lib/python2.7/site-packages/root_numpy-4.5.1-py2.7-linux-x86_64.egg/root_numpy/_tree.py:372: RuntimeWarning: ignoring duplicate branch named 'vtxTrackBias_2'
+  cache_size)
+/phys/linux/gcowan1/software/my_env/lib/python2.7/site-packages/sklearn/externals/joblib/hashing.py:211: FutureWarning: Numpy has detected that you (may be) writing to an array returned
+by numpy.diagonal or by selecting multiple fields in a structured
+array. This code will likely break in a future numpy release --
+see numpy.diagonal or arrays.indexing reference docs for details.
+The quick fix is to make an explicit copy (e.g., do
+arr.diagonal().copy() or arr[['f0','f1']].copy()).
+  self._getbuffer(obj_c_contiguous.view(self.np.uint8)))
+[0;31m[0m
+[0;31mJoblibValueError[0mTraceback (most recent call last)
+[0;32m/home/edrakopo/work/ener_reco_scikit/MYkeras_regression_energy_reco_lo_hi_TrainTestsampleGridSearch.py[0m in [0;36m<module>[0;34m()[0m
+[1;32m     53[0m [0;34m[0m[0m
+[1;32m     54[0m [0mgrid[0m [0;34m=[0m [0mGridSearchCV[0m[0;34m([0m[0mmodel[0m[0;34m,[0m [0mparam_grid[0m[0;34m,[0m [0mscoring[0m[0;34m=[0m[0;34m'neg_mean_squared_error'[0m[0;34m,[0m [0mn_jobs[0m[0;34m=[0m[0;34m-[0m[0;36m1[0m[0;34m)[0m[0;34m[0m[0m
+[0;32m---> 55[0;31m [0mgrid_result[0m [0;34m=[0m [0mgrid[0m[0;34m.[0m[0mfit[0m[0;34m([0m[0mdata_reduced_n[0m[0;34m,[0m [0mdata_target[0m[0;34m)[0m[0;34m[0m[0m
+[0m[1;32m     56[0m [0;31m# summarize results[0m[0;34m[0m[0;34m[0m[0m
+[1;32m     57[0m [0;32mprint[0m[0;34m([0m[0;34m"Best: %f using %s"[0m [0;34m%[0m [0;34m([0m[0mgrid_result[0m[0;34m.[0m[0mbest_score_[0m[0;34m,[0m [0mgrid_result[0m[0;34m.[0m[0mbest_params_[0m[0;34m)[0m[0;34m)[0m[0;34m[0m[0m
+
+[0;32m/phys/linux/gcowan1/software/my_env/lib/python2.7/site-packages/sklearn/model_selection/_search.pyc[0m in [0;36mfit[0;34m(self, X, y, groups)[0m
+[1;32m    943[0m             [0mtrain[0m[0;34m/[0m[0mtest[0m [0mset[0m[0;34m.[0m[0;34m[0m[0m
+[1;32m    944[0m         """
+[0;32m--> 945[0;31m         [0;32mreturn[0m [0mself[0m[0;34m.[0m[0m_fit[0m[0;34m([0m[0mX[0m[0;34m,[0m [0my[0m[0;34m,[0m [0mgroups[0m[0;34m,[0m [0mParameterGrid[0m[0;34m([0m[0mself[0m[0;34m.[0m[0mparam_grid[0m[0;34m)[0m[0;34m)[0m[0;34m[0m[0m
+[0m[1;32m    946[0m [0;34m[0m[0m
+[1;32m    947[0m [0;34m[0m[0m
+
+[0;32m/phys/linux/gcowan1/software/my_env/lib/python2.7/site-packages/sklearn/model_selection/_search.pyc[0m in [0;36m_fit[0;34m(self, X, y, groups, parameter_iterable)[0m
+[1;32m    562[0m                                   [0mreturn_times[0m[0;34m=[0m[0mTrue[0m[0;34m,[0m [0mreturn_parameters[0m[0;34m=[0m[0mTrue[0m[0;34m,[0m[0;34m[0m[0m
+[1;32m    563[0m                                   error_score=self.error_score)
+[0;32m--> 564[0;31m           [0;32mfor[0m [0mparameters[0m [0;32min[0m [0mparameter_iterable[0m[0;34m[0m[0m
+[0m[1;32m    565[0m           for train, test in cv_iter)
+[1;32m    566[0m [0;34m[0m[0m
+
+[0;32m/phys/linux/gcowan1/software/my_env/lib/python2.7/site-packages/sklearn/externals/joblib/parallel.pyc[0m in [0;36m__call__[0;34m(self, iterable)[0m
+[1;32m    766[0m                 [0;31m# consumption.[0m[0;34m[0m[0;34m[0m[0m
+[1;32m    767[0m                 [0mself[0m[0;34m.[0m[0m_iterating[0m [0;34m=[0m [0mFalse[0m[0;34m[0m[0m
+[0;32m--> 768[0;31m             [0mself[0m[0;34m.[0m[0mretrieve[0m[0;34m([0m[0;34m)[0m[0;34m[0m[0m
+[0m[1;32m    769[0m             [0;31m# Make sure that we get a last message telling us we are done[0m[0;34m[0m[0;34m[0m[0m
+[1;32m    770[0m             [0melapsed_time[0m [0;34m=[0m [0mtime[0m[0;34m.[0m[0mtime[0m[0;34m([0m[0;34m)[0m [0;34m-[0m [0mself[0m[0;34m.[0m[0m_start_time[0m[0;34m[0m[0m
+
+[0;32m/phys/linux/gcowan1/software/my_env/lib/python2.7/site-packages/sklearn/externals/joblib/parallel.pyc[0m in [0;36mretrieve[0;34m(self)[0m
+[1;32m    717[0m                     [0mensure_ready[0m [0;34m=[0m [0mself[0m[0;34m.[0m[0m_managed_backend[0m[0;34m[0m[0m
+[1;32m    718[0m                     [0mbackend[0m[0;34m.[0m[0mabort_everything[0m[0;34m([0m[0mensure_ready[0m[0;34m=[0m[0mensure_ready[0m[0;34m)[0m[0;34m[0m[0m
+[0;32m--> 719[0;31m                 [0;32mraise[0m [0mexception[0m[0;34m[0m[0m
+[0m[1;32m    720[0m [0;34m[0m[0m
+[1;32m    721[0m     [0;32mdef[0m [0m__call__[0m[0;34m([0m[0mself[0m[0;34m,[0m [0miterable[0m[0;34m)[0m[0;34m:[0m[0;34m[0m[0m
+
+[0;31mJoblibValueError[0m: JoblibValueError
+___________________________________________________________________________
+Multiprocessing exception:
+...........................................................................
+/phys/linux/gcowan1/software/my_env/bin/ipython in <module>()
+      6 
+      7 from IPython import start_ipython
+      8 
+      9 if __name__ == '__main__':
+     10     sys.argv[0] = re.sub(r'(-script\.pyw|\.exe)?$', '', sys.argv[0])
+---> 11     sys.exit(start_ipython())
+     12 
+     13 
+     14 
+     15 
+
+...........................................................................
+/phys/linux/gcowan1/software/my_env/lib/python2.7/site-packages/IPython/__init__.py in start_ipython(argv=None, **kwargs={})
+    114     kwargs : various, optional
+    115         Any other kwargs will be passed to the Application constructor,
+    116         such as `config`.
+    117     """
+    118     from IPython.terminal.ipapp import launch_new_instance
+--> 119     return launch_new_instance(argv=argv, **kwargs)
+        launch_new_instance = <bound method MetaHasTraits.launch_instance of <class 'IPython.terminal.ipapp.TerminalIPythonApp'>>
+        argv = None
+        kwargs = {}
+    120 
+    121 def start_kernel(argv=None, **kwargs):
+    122     """Launch a normal IPython kernel instance (as opposed to embedded)
+    123     
+
+...........................................................................
+/phys/linux/gcowan1/software/my_env/lib/python2.7/site-packages/traitlets/config/application.py in launch_instance(cls=<class 'IPython.terminal.ipapp.TerminalIPythonApp'>, argv=None, **kwargs={})
+    590         """Launch a global instance of this Application
+    591         
+    592         If a global instance already exists, this reinitializes and starts it
+    593         """
+    594         app = cls.instance(**kwargs)
+--> 595         app.initialize(argv)
+        app.initialize = <bound method TerminalIPythonApp.initialize of <IPython.terminal.ipapp.TerminalIPythonApp object>>
+        argv = None
+    596         app.start()
+    597 
+    598 #-----------------------------------------------------------------------------
+    599 # utility functions, for convenience
+
+...........................................................................
+/home/edrakopo/work/ener_reco_scikit/<decorator-gen-109> in initialize(self=<IPython.terminal.ipapp.TerminalIPythonApp object>, argv=None)
+      1 
+----> 2 
+      3 
+      4 
+      5 
+      6 
+      7 
+      8 
+      9 
+     10 
+
+...........................................................................
+/phys/linux/gcowan1/software/my_env/lib/python2.7/site-packages/traitlets/config/application.py in catch_config_error(method=<function initialize>, app=<IPython.terminal.ipapp.TerminalIPythonApp object>, *args=(None,), **kwargs={})
+     69     message, and exit the app.
+     70     
+     71     For use on init methods, to prevent invoking excepthook on invalid input.
+     72     """
+     73     try:
+---> 74         return method(app, *args, **kwargs)
+        method = <function initialize>
+        app = <IPython.terminal.ipapp.TerminalIPythonApp object>
+        args = (None,)
+        kwargs = {}
+     75     except (TraitError, ArgumentError) as e:
+     76         app.print_help()
+     77         app.log.fatal("Bad config encountered during initialization:")
+     78         app.log.fatal(str(e))
+
+...........................................................................
+/phys/linux/gcowan1/software/my_env/lib/python2.7/site-packages/IPython/terminal/ipapp.py in initialize(self=<IPython.terminal.ipapp.TerminalIPythonApp object>, argv=None)
+    310         # and draw the banner
+    311         self.init_banner()
+    312         # Now a variety of things that happen after the banner is printed.
+    313         self.init_gui_pylab()
+    314         self.init_extensions()
+--> 315         self.init_code()
+        self.init_code = <bound method TerminalIPythonApp.init_code of <IPython.terminal.ipapp.TerminalIPythonApp object>>
+    316 
+    317     def init_shell(self):
+    318         """initialize the InteractiveShell instance"""
+    319         # Create an InteractiveShell instance.
+
+...........................................................................
+/phys/linux/gcowan1/software/my_env/lib/python2.7/site-packages/IPython/core/shellapp.py in init_code(self=<IPython.terminal.ipapp.TerminalIPythonApp object>)
+    268         if self.hide_initial_ns:
+    269             self.shell.user_ns_hidden.update(self.shell.user_ns)
+    270         
+    271         # command-line execution (ipython -i script.py, ipython -m module)
+    272         # should *not* be excluded from %whos
+--> 273         self._run_cmd_line_code()
+        self._run_cmd_line_code = <bound method TerminalIPythonApp._run_cmd_line_c...Python.terminal.ipapp.TerminalIPythonApp object>>
+    274         self._run_module()
+    275         
+    276         # flush output, so itwon't be attached to the first cell
+    277         sys.stdout.flush()
+
+...........................................................................
+/phys/linux/gcowan1/software/my_env/lib/python2.7/site-packages/IPython/core/shellapp.py in _run_cmd_line_code(self=<IPython.terminal.ipapp.TerminalIPythonApp object>)
+    387 
+    388         # Like Python itself, ignore the second if the first of these is present
+    389         elif self.file_to_run:
+    390             fname = self.file_to_run
+    391             try:
+--> 392                 self._exec_file(fname, shell_futures=True)
+        self._exec_file = <bound method TerminalIPythonApp._exec_file of <IPython.terminal.ipapp.TerminalIPythonApp object>>
+        fname = u'MYkeras_regression_energy_reco_lo_hi_TrainTestsampleGridSearch.py'
+    393             except:
+    394                 self.shell.showtraceback(tb_offset=4)
+    395                 if not self.interact:
+    396                     self.exit(1)
+
+...........................................................................
+/phys/linux/gcowan1/software/my_env/lib/python2.7/site-packages/IPython/core/shellapp.py in _exec_file(self=<IPython.terminal.ipapp.TerminalIPythonApp object>, fname=u'MYkeras_regression_energy_reco_lo_hi_TrainTestsampleGridSearch.py', shell_futures=True)
+    323                     else:
+    324                         # default to python, even without extension
+    325                         self.shell.safe_execfile(full_filename,
+    326                                                  self.shell.user_ns,
+    327                                                  shell_futures=shell_futures,
+--> 328                                                  raise_exceptions=True)
+    329         finally:
+    330             sys.argv = save_argv
+    331 
+    332     def _run_startup_files(self):
+
+...........................................................................
+/phys/linux/gcowan1/software/my_env/lib/python2.7/site-packages/IPython/core/interactiveshell.py in safe_execfile(self=<IPython.terminal.interactiveshell.TerminalInteractiveShell object>, fname=u'/home/edrakopo/work/ener_reco_scikit/MYkeras_r...n_energy_reco_lo_hi_TrainTestsampleGridSearch.py', *where=({'Activation': <class 'keras.layers.core.Activation'>, 'Dense': <class 'keras.layers.core.Dense'>, 'E_threshold_hi': 600, 'E_threshold_lo': 200, 'GridSearchCV': <class 'sklearn.model_selection._search.GridSearchCV'>, 'In': [''], 'KerasRegressor': <class 'keras.wrappers.scikit_learn.KerasRegressor'>, 'Out': {}, 'ROOT': <module 'ROOT' from '/cvmfs/sft.cern.ch/lcg/rele...7-07-aliceml/x86_64-slc6-gcc49-opt/lib/ROOT.pyc'>, 'Sequential': <class 'keras.models.Sequential'>, ...},), **kw={'exit_ignore': False, 'raise_exceptions': True, 'shell_futures': True})
+   2464         with prepended_to_syspath(dname):
+   2465             try:
+   2466                 glob, loc = (where + (None, ))[:2]
+   2467                 py3compat.execfile(
+   2468                     fname, glob, loc,
+-> 2469                     self.compile if kw['shell_futures'] else None)
+        self.compile = <IPython.core.compilerop.CachingCompiler instance>
+        kw = {'exit_ignore': False, 'raise_exceptions': True, 'shell_futures': True}
+   2470             except SystemExit as status:
+   2471                 # If the call was made with 0 or None exit status (sys.exit(0)
+   2472                 # or sys.exit() ), don't bother showing a traceback, as both of
+   2473                 # these are considered normal by the OS:
+
+...........................................................................
+/phys/linux/gcowan1/software/my_env/lib/python2.7/site-packages/IPython/utils/py3compat.py in execfile(fname=u'/home/edrakopo/work/ener_reco_scikit/MYkeras_r...n_energy_reco_lo_hi_TrainTestsampleGridSearch.py', glob={'Activation': <class 'keras.layers.core.Activation'>, 'Dense': <class 'keras.layers.core.Dense'>, 'E_threshold_hi': 600, 'E_threshold_lo': 200, 'GridSearchCV': <class 'sklearn.model_selection._search.GridSearchCV'>, 'In': [''], 'KerasRegressor': <class 'keras.wrappers.scikit_learn.KerasRegressor'>, 'Out': {}, 'ROOT': <module 'ROOT' from '/cvmfs/sft.cern.ch/lcg/rele...7-07-aliceml/x86_64-slc6-gcc49-opt/lib/ROOT.pyc'>, 'Sequential': <class 'keras.models.Sequential'>, ...}, loc=None, compiler=<IPython.core.compilerop.CachingCompiler instance>)
+    286             where = [ns for ns in [glob, loc] if ns is not None]
+    287             if compiler is None:
+    288                 builtin_mod.execfile(filename, *where)
+    289             else:
+    290                 scripttext = builtin_mod.open(fname).read().rstrip() + '\n'
+--> 291                 exec(compiler(scripttext, filename, 'exec'), glob, loc)
+        compiler = <IPython.core.compilerop.CachingCompiler instance>
+        scripttext = "from keras.models import Sequential\nfrom keras.l...ing {'nb_epoch': 100, 'batch_size': 10}\n\n#######\n"
+        filename = '/home/edrakopo/work/ener_reco_scikit/MYkeras_reg...on_energy_reco_lo_hi_TrainTestsampleGridSearch.py'
+        glob = {'Activation': <class 'keras.layers.core.Activation'>, 'Dense': <class 'keras.layers.core.Dense'>, 'E_threshold_hi': 600, 'E_threshold_lo': 200, 'GridSearchCV': <class 'sklearn.model_selection._search.GridSearchCV'>, 'In': [''], 'KerasRegressor': <class 'keras.wrappers.scikit_learn.KerasRegressor'>, 'Out': {}, 'ROOT': <module 'ROOT' from '/cvmfs/sft.cern.ch/lcg/rele...7-07-aliceml/x86_64-slc6-gcc49-opt/lib/ROOT.pyc'>, 'Sequential': <class 'keras.models.Sequential'>, ...}
+        loc = None
+    292 
+    293 
+    294 PY2 = not PY3
+    295 
+
+...........................................................................
+/home/edrakopo/work/ener_reco_scikit/MYkeras_regression_energy_reco_lo_hi_TrainTestsampleGridSearch.py in <module>()
+     50 
+     51 #param_grid = dict(batch_size=batch_size, nb_epoch=nb_epoch, optimizer=optimizer, learn_rate=learn_rate, momentum=momentum, init_mode=init_mode, activation=activation, dropout_rate=dropout_rate, weight_constraint=weight_constraint, neurons=neurons)
+     52 param_grid = dict( init_mode=init_mode, activation=activation, weight_constraint=weight_constraint, neurons=neurons)
+     53 
+     54 grid = GridSearchCV(model, param_grid, scoring='neg_mean_squared_error', n_jobs=-1)
+---> 55 grid_result = grid.fit(data_reduced_n, data_target)
+     56 # summarize results
+     57 print("Best: %f using %s" % (grid_result.best_score_, grid_result.best_params_))
+     58 means = grid_result.cv_results_['mean_test_score']
+     59 stds = grid_result.cv_results_['std_test_score']
+
+...........................................................................
+/phys/linux/gcowan1/software/my_env/lib/python2.7/site-packages/sklearn/model_selection/_search.py in fit(self=GridSearchCV(cv=None, error_score='raise',
+     ...     scoring='neg_mean_squared_error', verbose=0), X=array([[ 0.112375  ,  0.15955   ,  0.07839913,  ...10527,  0.61642098,  0.07174429]], dtype=float32), y=array([ 0.32463332,  0.28393132,  0.20387313, ...,  0.49976595,
+        0.36495205,  0.36495205]), groups=None)
+    940 
+    941         groups : array-like, with shape (n_samples,), optional
+    942             Group labels for the samples used while splitting the dataset into
+    943             train/test set.
+    944         """
+--> 945         return self._fit(X, y, groups, ParameterGrid(self.param_grid))
+        self._fit = <bound method GridSearchCV._fit of GridSearchCV(...    scoring='neg_mean_squared_error', verbose=0)>
+        X = array([[ 0.112375  ,  0.15955   ,  0.07839913,  ...10527,  0.61642098,  0.07174429]], dtype=float32)
+        y = array([ 0.32463332,  0.28393132,  0.20387313, ...,  0.49976595,
+        0.36495205,  0.36495205])
+        groups = None
+        self.param_grid = {'activation': ['softmax', 'softplus', 'softsign', 'relu', 'tanh', 'sigmoid', 'hard_sigmoid', 'linear'], 'init_mode': ['uniform', 'lecun_uniform', 'normal', 'zero', 'glorot_normal', 'glorot_uniform', 'he_normal', 'he_uniform'], 'neurons': [1, 5, 10, 15, 20, 25, 30], 'weight_constraint': [1, 2, 3, 4, 5]}
+    946 
+    947 
+    948 class RandomizedSearchCV(BaseSearchCV):
+    949     """Randomized search on hyper parameters.
+
+...........................................................................
+/phys/linux/gcowan1/software/my_env/lib/python2.7/site-packages/sklearn/model_selection/_search.py in _fit(self=GridSearchCV(cv=None, error_score='raise',
+     ...     scoring='neg_mean_squared_error', verbose=0), X=array([[ 0.112375  ,  0.15955   ,  0.07839913,  ...10527,  0.61642098,  0.07174429]], dtype=float32), y=array([ 0.32463332,  0.28393132,  0.20387313, ...,  0.49976595,
+        0.36495205,  0.36495205]), groups=None, parameter_iterable=<sklearn.model_selection._search.ParameterGrid object>)
+    559                                   fit_params=self.fit_params,
+    560                                   return_train_score=self.return_train_score,
+    561                                   return_n_test_samples=True,
+    562                                   return_times=True, return_parameters=True,
+    563                                   error_score=self.error_score)
+--> 564           for parameters in parameter_iterable
+        parameters = undefined
+        parameter_iterable = <sklearn.model_selection._search.ParameterGrid object>
+    565           for train, test in cv_iter)
+    566 
+    567         # if one choose to see train score, "out" will contain train score info
+    568         if self.return_train_score:
+
+...........................................................................
+/phys/linux/gcowan1/software/my_env/lib/python2.7/site-packages/sklearn/externals/joblib/parallel.py in __call__(self=Parallel(n_jobs=-1), iterable=<generator object <genexpr>>)
+    763             if pre_dispatch == "all" or n_jobs == 1:
+    764                 # The iterable was consumed all at once by the above for loop.
+    765                 # No need to wait for async callbacks to trigger to
+    766                 # consumption.
+    767                 self._iterating = False
+--> 768             self.retrieve()
+        self.retrieve = <bound method Parallel.retrieve of Parallel(n_jobs=-1)>
+    769             # Make sure that we get a last message telling us we are done
+    770             elapsed_time = time.time() - self._start_time
+    771             self._print('Done %3i out of %3i | elapsed: %s finished',
+    772                         (len(self._output), len(self._output),
+
+---------------------------------------------------------------------------
+Sub-process traceback:
+---------------------------------------------------------------------------
+ValueError                                         Fri May 19 16:54:25 2017
+PID: 26698    Python 2.7.10: /phys/linux/gcowan1/software/my_env/bin/python
+...........................................................................
+/phys/linux/gcowan1/software/my_env/lib/python2.7/site-packages/sklearn/externals/joblib/parallel.py in __call__(self=<sklearn.externals.joblib.parallel.BatchedCalls object>)
+    126     def __init__(self, iterator_slice):
+    127         self.items = list(iterator_slice)
+    128         self._size = len(self.items)
+    129 
+    130     def __call__(self):
+--> 131         return [func(*args, **kwargs) for func, args, kwargs in self.items]
+        func = <function _fit_and_score>
+        args = (<keras.wrappers.scikit_learn.KerasRegressor object>, memmap([[ 0.112375  ,  0.15955   ,  0.07839913, ...10527,  0.61642098,  0.07174429]], dtype=float32), array([ 0.32463332,  0.28393132,  0.20387313, ...,  0.49976595,
+        0.36495205,  0.36495205]), make_scorer(mean_squared_error, greater_is_better=False), array([22167, 22168, 22169, ..., 66496, 66497, 66498]), array([    0,     1,     2, ..., 22164, 22165, 22166]), 0, {'activation': 'softmax', 'init_mode': 'uniform', 'neurons': 1, 'weight_constraint': 1})
+        kwargs = {'error_score': 'raise', 'fit_params': {}, 'return_n_test_samples': True, 'return_parameters': True, 'return_times': True, 'return_train_score': True}
+        self.items = [(<function _fit_and_score>, (<keras.wrappers.scikit_learn.KerasRegressor object>, memmap([[ 0.112375  ,  0.15955   ,  0.07839913, ...10527,  0.61642098,  0.07174429]], dtype=float32), array([ 0.32463332,  0.28393132,  0.20387313, ...,  0.49976595,
+        0.36495205,  0.36495205]), make_scorer(mean_squared_error, greater_is_better=False), array([22167, 22168, 22169, ..., 66496, 66497, 66498]), array([    0,     1,     2, ..., 22164, 22165, 22166]), 0, {'activation': 'softmax', 'init_mode': 'uniform', 'neurons': 1, 'weight_constraint': 1}), {'error_score': 'raise', 'fit_params': {}, 'return_n_test_samples': True, 'return_parameters': True, 'return_times': True, 'return_train_score': True})]
+    132 
+    133     def __len__(self):
+    134         return self._size
+    135 
+
+...........................................................................
+/phys/linux/gcowan1/software/my_env/lib/python2.7/site-packages/sklearn/model_selection/_validation.py in _fit_and_score(estimator=<keras.wrappers.scikit_learn.KerasRegressor object>, X=memmap([[ 0.112375  ,  0.15955   ,  0.07839913, ...10527,  0.61642098,  0.07174429]], dtype=float32), y=array([ 0.32463332,  0.28393132,  0.20387313, ...,  0.49976595,
+        0.36495205,  0.36495205]), scorer=make_scorer(mean_squared_error, greater_is_better=False), train=array([22167, 22168, 22169, ..., 66496, 66497, 66498]), test=array([    0,     1,     2, ..., 22164, 22165, 22166]), verbose=0, parameters={'activation': 'softmax', 'init_mode': 'uniform', 'neurons': 1, 'weight_constraint': 1}, fit_params={}, return_train_score=True, return_parameters=True, return_n_test_samples=True, return_times=True, error_score='raise')
+    222     fit_params = fit_params if fit_params is not None else {}
+    223     fit_params = dict([(k, _index_param_value(X, v, train))
+    224                       for k, v in fit_params.items()])
+    225 
+    226     if parameters is not None:
+--> 227         estimator.set_params(**parameters)
+        estimator.set_params = <bound method KerasRegressor.set_params of <keras.wrappers.scikit_learn.KerasRegressor object>>
+        parameters = {'activation': 'softmax', 'init_mode': 'uniform', 'neurons': 1, 'weight_constraint': 1}
+    228 
+    229     start_time = time.time()
+    230 
+    231     X_train, y_train = _safe_split(estimator, X, y, train)
+
+...........................................................................
+/phys/linux/gcowan1/software/my_env/lib/python2.7/site-packages/keras/wrappers/scikit_learn.py in set_params(self=<keras.wrappers.scikit_learn.KerasRegressor object>, **params={'activation': 'softmax', 'init_mode': 'uniform', 'neurons': 1, 'weight_constraint': 1})
+    102             **params: Dictionary of parameter names mapped to their values.
+    103 
+    104         # Returns
+    105             self
+    106         """
+--> 107         self.check_params(params)
+        self.check_params = <bound method KerasRegressor.check_params of <keras.wrappers.scikit_learn.KerasRegressor object>>
+        params = {'activation': 'softmax', 'init_mode': 'uniform', 'neurons': 1, 'weight_constraint': 1}
+    108         self.sk_params.update(params)
+    109         return self
+    110 
+    111     def fit(self, x, y, **kwargs):
+
+...........................................................................
+/phys/linux/gcowan1/software/my_env/lib/python2.7/site-packages/keras/wrappers/scikit_learn.py in check_params(self=<keras.wrappers.scikit_learn.KerasRegressor object>, params={'activation': 'softmax', 'init_mode': 'uniform', 'neurons': 1, 'weight_constraint': 1})
+     80             legal_params += inspect.getargspec(fn)[0]
+     81         legal_params = set(legal_params)
+     82 
+     83         for params_name in params:
+     84             if params_name not in legal_params:
+---> 85                 raise ValueError('{} is not a legal parameter'.format(params_name))
+        params_name = 'init_mode'
+     86 
+     87     def get_params(self, **params):
+     88         """Gets parameters for this estimator.
+     89 
+
+ValueError: init_mode is not a legal parameter
+___________________________________________________________________________

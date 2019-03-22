@@ -1,0 +1,1 @@
+scikit_recoLAST0	 	Mean: 	   0.45837	Sigma: 	2.97438	Lower Percentage: 	-3.53326	Upper Percentage: 	4.35384	Percentage in Sigma: 	0

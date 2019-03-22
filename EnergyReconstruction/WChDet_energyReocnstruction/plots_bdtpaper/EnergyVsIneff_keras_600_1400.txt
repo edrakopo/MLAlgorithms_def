@@ -1,0 +1,1 @@
+keras_reco_TrainTestSamplePAPER0	 	Mean: 	   1.08639	Sigma: 	3.7766	Lower Percentage: 	-5.55154	Upper Percentage: 	6.36352	Percentage in Sigma: 	0

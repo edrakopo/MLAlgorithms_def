@@ -1,0 +1,6 @@
+legend2 = new TLegend(0.1,0.7,0.48,0.6);
+legend2->AddEntry("plot_emu_erecoBDTG","scikit BDTG");
+legend2->AddEntry("ener_resolution","ROOT-TMVA BDTG");
+legend2->AddEntry("ener_resolutionTITUS","TITUS lookup tables");
+legend2->AddEntry("plot_emu_erecoBDTG", "deep learning");
+legend2->Draw();

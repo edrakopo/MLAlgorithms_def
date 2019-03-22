@@ -1,0 +1,1 @@
+FINALTMVARegApp_MLP_ener_lilia_CCQE_1040_1100_NEWlookupsTEST_MYselectedVars_large_statTEST10000treesB0	 	Mean: 	-  1.01426	Sigma: 	7	Lower Percentage: 	-12.1408	Upper Percentage: 	9.93186	Percentage in Sigma: 	0
