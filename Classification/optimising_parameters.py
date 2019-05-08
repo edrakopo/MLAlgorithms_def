@@ -12,12 +12,12 @@ from sklearn.model_selection import RandomizedSearchCV, GridSearchCV
 #data = pd.concat( [ pd.read_csv(f) for f in filenames ] ) merge .csv files
 #print("combined_csv: ", data)
 #data_e = pd.read_csv("data/electrons_uniform.csv", names = ["Dist from vertex to PMT (m)", "Angle (rad)", "Energy (MeV)", "Expected # of p.e", "Expected hit time"])
-data_e = pd.read_csv("data/electrons_uniform_bins_20x_20y_10z.csv", names = ["Dist from vertex to PMT (m)", "Angle (rad)", "Energy (MeV)", "Expected # of p.e", "Expected hit time"])
-data_e['Particle Type'] = "electron"
+data_e = pd.read_csv("data/pdf_electron_Parametric_single.csv", header = None)
+data_e[8] = "electron"
 
 #data_mu = pd.read_csv("data/muons_uniform.csv", names = ["Dist from vertex to PMT (m)", "Angle (rad)", "Energy (MeV)", "Expected # of p.e", "Expected hit time"])
-data_mu = pd.read_csv("data/muons_uniform_bins_20x_20y_10z.csv", names = ["Dist from vertex to PMT (m)", "Angle (rad)", "Energy (MeV)", "Expected # of p.e", "Expected hit time"])
-data_mu['Particle Type'] = "muon"
+data_mu = pd.read_csv("data/pdf_muon_Parametric_single.csv", header = None)
+data_mu[8] = "muon"
 
 #print("data_e: ", data_e)
 #print("data_mu: ", data_mu)
@@ -29,8 +29,8 @@ data = pd.concat([data_e,data_mu],axis=0)
 #data = pd.concat([data_e0,data_mu0],axis=0)
 
 # ------ Load data -----------
-X = data.iloc[:,0:5]  # ignore first column which is row Id
-y = data.iloc[:,5:6]  # Classification on the 'Species'
+X = data.iloc[:,0:8]  # ignore first column which is row Id
+y = data.iloc[:,8:9]  # Classification on the 'Species'
 
 #print("X_data: ",X)
 #print("Y_data: ",y)
