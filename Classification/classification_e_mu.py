@@ -10,11 +10,11 @@ from sklearn import preprocessing
 #data = pd.concat( [ pd.read_csv(f) for f in filenames ] ) merge .csv files
 #print("combined_csv: ", data)
 #data_e = pd.read_csv("data/electrons_uniform.csv", names = ["Dist from vertex to PMT (m)", "Angle (rad)", "Energy (MeV)", "Expected # of p.e", "Expected hit time"])
-data_e = pd.read_csv("data/electrons_uniform_bins_20x_20y_10z.csv", names = ["Dist from vertex to PMT (m)", "Angle (rad)", "Energy (MeV)", "Expected # of p.e", "Expected hit time"])
+data_e = pd.read_csv("data/electrons_uniform_x20_y20_z10_Parametric.csv", names = ["Dist from vertex to PMT (m)", "Angle (rad)", "Energy (MeV)", "Expected # of p.e", "Expected hit time"])
 data_e['Particle Type'] = "electron"
 
 #data_mu = pd.read_csv("data/muons_uniform.csv", names = ["Dist from vertex to PMT (m)", "Angle (rad)", "Energy (MeV)", "Expected # of p.e", "Expected hit time"])
-data_mu = pd.read_csv("data/muons_uniform_bins_20x_20y_10z.csv", names = ["Dist from vertex to PMT (m)", "Angle (rad)", "Energy (MeV)", "Expected # of p.e", "Expected hit time"])
+data_mu = pd.read_csv("data/muons_uniform_x20_y20_z10_Parametric.csv", names = ["Dist from vertex to PMT (m)", "Angle (rad)", "Energy (MeV)", "Expected # of p.e", "Expected hit time"])
 data_mu['Particle Type'] = "muon"
 
 #print("data_e: ", data_e)
@@ -212,8 +212,8 @@ model = GradientBoostingClassifier(learning_rate=0.1, max_depth=8, n_estimators=
 run_model(model, " GradientBoostingClassifier ", 10)
 
 #plt.show()
-fig.savefig("result_e_mulessALL.png")
-fig2.savefig("ROCcurve_e_mulessALL.png")
+fig.savefig("result_e_mulessALL_oldCSV.png")
+fig2.savefig("ROCcurve_e_mulessALL_oldCSV.png")
 #plt.savefig("result_e_mulessALL.png")
 #plt.savefig("result_e_muALL.png")
 #plt.savefig("result_e_mu.png")
