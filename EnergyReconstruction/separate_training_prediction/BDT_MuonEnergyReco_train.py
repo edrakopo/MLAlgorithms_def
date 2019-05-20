@@ -19,6 +19,7 @@ import sklearn
 from sklearn.utils import shuffle
 from sklearn import linear_model, ensemble
 from sklearn.metrics import mean_squared_error
+import pickle
 #import seaborn as sns
 
 #import ROOT
@@ -28,7 +29,8 @@ from sklearn.metrics import mean_squared_error
 
 #-------- File with events for reconstruction:
 #--- evts for training:
-infile = "../../LocalFolder/vars_Ereco.csv"
+#infile = "../../LocalFolder/vars_Ereco.csv"
+infile = "../data/vars_Ereco.csv"
 #----------------
 
 # Set TF random seed to improve reproducibility

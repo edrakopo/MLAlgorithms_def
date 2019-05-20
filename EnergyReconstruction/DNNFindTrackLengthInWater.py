@@ -80,10 +80,6 @@ train_input_fn = tf.estimator.inputs.numpy_input_fn(
       x={'x': train_x}, y=train_y, batch_size=batch_size, num_epochs=epochs_no, shuffle=False,num_threads=1)
 regressor.train(input_fn=train_input_fn,steps=1000) #1000)
 
-# save the model to disk
-filename = 'DNN.sav'
-pickle.dump(regressor, open(filename, 'wb'))
- 
 # Predict.
 print('predicting...')
 x_transformed = scaler.transform(test_x)
