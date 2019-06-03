@@ -33,7 +33,8 @@ from sklearn.model_selection import RandomizedSearchCV, GridSearchCV
 
 #-------- File with events for reconstruction:
 #--- evts for training:
-infile = "../../../LocalFolder/vars_Ereco.csv"
+#infile = "../../../LocalFolder/vars_Ereco.csv"
+infile = "/Users/edrakopo/work/ANNIEReco_PythonScripts/vars_Ereco_train_05202019.csv"
 #----------------
 
 # Set TF random seed to improve reproducibility
@@ -53,7 +54,9 @@ filein = open(str(infile))
 print("evts for training in: ",filein)
 df00=pd.read_csv(filein)
 df0=df00[['totalPMTs','totalLAPPDs','TrueTrackLengthInWater','neutrinoE','trueKE','diffDirAbs','TrueTrackLengthInMrd','recoDWallR','recoDWallZ','dirX','dirY','dirZ','vtxX','vtxY','vtxZ','DNNRecoLength']]
-dfsel=df0.loc[df0['neutrinoE'] < E_threshold]
+#dfsel=df0.loc[df0['neutrinoE'] < E_threshold]
+dfsel=df0
+print("df0.head(): ", df0.head())
 
 #print to check:
 print("check training sample: ",dfsel.head())
@@ -62,7 +65,8 @@ print("check training sample: ",dfsel.head())
 assert(dfsel.isnull().any().any()==False)
 
 #--- normalisation-training sample:
-dfsel_n = pd.DataFrame([ dfsel['DNNRecoLength']/600., dfsel['TrueTrackLengthInMrd']/200., dfsel['diffDirAbs'], dfsel['recoDWallR']/152.4, dfsel['recoDWallZ']/198., dfsel['totalLAPPDs']/1000., dfsel['totalPMTs']/1000., dfsel['vtxX']/150., dfsel['vtxY']/200., dfsel['vtxZ']/150. ]).T
+#dfsel_n = pd.DataFrame([ dfsel['DNNRecoLength']/600., dfsel['TrueTrackLengthInMrd']/200., dfsel['diffDirAbs'], dfsel['recoDWallR']/152.4, dfsel['recoDWallZ']/198., dfsel['totalLAPPDs']/1000., dfsel['totalPMTs']/1000., dfsel['vtxX']/150., dfsel['vtxY']/200., dfsel['vtxZ']/150. ]).T
+dfsel_n = pd.DataFrame([ dfsel['DNNRecoLength']/600., dfsel['TrueTrackLengthInMrd']/200., dfsel['diffDirAbs'], dfsel['recoDWallR'], dfsel['recoDWallZ'], dfsel['totalLAPPDs']/200., dfsel['totalPMTs']/200., dfsel['vtxX']/150., dfsel['vtxY']/200., dfsel['vtxZ']/150. ]).T
 print("chehck normalisation: ", dfsel_n.head())
 
 #--- prepare training & test sample for BDT:

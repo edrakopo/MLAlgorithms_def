@@ -3,7 +3,6 @@
 import sys
 import numpy as np
 import pandas as pd
-import tensorflow as tf
 import tempfile
 import random
 import csv
@@ -20,7 +19,7 @@ from sklearn.utils import shuffle
 from sklearn import linear_model, ensemble
 from sklearn.metrics import mean_squared_error
 import pickle
-#import seaborn as sns
+import seaborn as sns
 
 #import ROOT
 #ROOT.gROOT.SetBatch(True)
@@ -29,9 +28,11 @@ import pickle
 
 #-------- File with events for reconstruction:
 #--- evts for training:
-infile = "../../LocalFolder/vars_Ereco.csv"
+#infile = "../../LocalFolder/vars_Ereco.csv"
+#infile = "/Users/edrakopo/work/ANNIEReco_PythonScripts/vars_Ereco_05202019.csv"
 #--- evts for prediction:
-infile2 = "../../LocalFolder/vars_Ereco.csv"
+#infile2 = "../../LocalFolder/vars_Ereco.csv"
+infile2 = "/Users/edrakopo/work/ANNIEReco_PythonScripts/vars_Ereco_pred_05202019.csv"
 #----------------
 
 # Set TF random seed to improve reproducibility
@@ -47,24 +48,26 @@ print('bins: ', bins)
 
 print( "--- opening file with input variables!") 
 #--- events for training ---
-filein = open(str(infile))
-#print("evts for training in: ",filein)
-df00=pd.read_csv(filein)
-df0=df00[['totalPMTs','totalLAPPDs','TrueTrackLengthInWater','neutrinoE','trueKE','diffDirAbs','TrueTrackLengthInMrd','recoDWallR','recoDWallZ','dirX','dirY','dirZ','vtxX','vtxY','vtxZ','DNNRecoLength']]
-dfsel=df0.loc[df0['neutrinoE'] < E_threshold]
+#filein = open(str(infile))
+##print("evts for training in: ",filein)
+#df00=pd.read_csv(filein)
+#df0=df00[['totalPMTs','totalLAPPDs','TrueTrackLengthInWater','neutrinoE','trueKE','diffDirAbs','TrueTrackLengthInMrd','recoDWallR','recoDWallZ','dirX','dirY','dirZ','vtxX','vtxY','vtxZ','DNNRecoLength']]
+##dfsel=df0.loc[df0['neutrinoE'] < E_threshold]
+#dfsel = df0
 
 #print to check:
-print("check training sample: ",dfsel.head())
+#print("check training sample: ",dfsel.head())
 #print(dfsel.iloc[5:10,0:5])
 #check fr NaN values:
-assert(dfsel.isnull().any().any()==False)
+#assert(dfsel.isnull().any().any()==False)
 
 #--- events for predicting ---
 filein2 = open(str(infile2))
 print(filein2)
 df00b = pd.read_csv(filein2)
 df0b=df00b[['totalPMTs','totalLAPPDs','TrueTrackLengthInWater','neutrinoE','trueKE','diffDirAbs','TrueTrackLengthInMrd','recoDWallR','recoDWallZ','dirX','dirY','dirZ','vtxX','vtxY','vtxZ','DNNRecoLength']]
-dfsel_pred=df0b.loc[df0b['neutrinoE'] < E_threshold]
+#dfsel_pred=df0b.loc[df0b['neutrinoE'] < E_threshold]
+dfsel_pred=df0b
 #print to check:
 print("check predicting sample: ",dfsel_pred.shape," ",dfsel_pred.head())
 #   print(dfsel_pred.iloc[5:10,0:5])
@@ -72,29 +75,35 @@ print("check predicting sample: ",dfsel_pred.shape," ",dfsel_pred.head())
 assert(dfsel_pred.isnull().any().any()==False)
 
 #--- normalisation-training sample:
-dfsel_n = pd.DataFrame([ dfsel['DNNRecoLength']/600., dfsel['TrueTrackLengthInMrd']/200., dfsel['diffDirAbs'], dfsel['recoDWallR']/152.4, dfsel['recoDWallZ']/198., dfsel['totalLAPPDs']/1000., dfsel['totalPMTs']/1000., dfsel['vtxX']/150., dfsel['vtxY']/200., dfsel['vtxZ']/150. ]).T
+##dfsel_n = pd.DataFrame([ dfsel['DNNRecoLength']/600., dfsel['TrueTrackLengthInMrd']/200., dfsel['diffDirAbs'], dfsel['recoDWallR']/152.4, dfsel['recoDWallZ']/198., dfsel['totalLAPPDs']/1000., dfsel['totalPMTs']/1000., dfsel['vtxX']/150., dfsel['vtxY']/200., dfsel['vtxZ']/150. ]).T
+#dfsel_n = pd.DataFrame([ dfsel['DNNRecoLength']/600., dfsel['TrueTrackLengthInMrd']/200., dfsel['diffDirAbs'], dfsel['recoDWallR'], dfsel['recoDWallZ'], dfsel['totalLAPPDs']/200., dfsel['totalPMTs']/200., dfsel['vtxX']/150., dfsel['vtxY']/200., dfsel['vtxZ']/150. ]).T
 #print("chehck normalisation: ", dfsel_n.head())
 #--- normalisation-sample for prediction:
-dfsel_pred_n = pd.DataFrame([ dfsel_pred['DNNRecoLength']/600., dfsel_pred['TrueTrackLengthInMrd']/200., dfsel_pred['diffDirAbs'], dfsel_pred['recoDWallR']/152.4, dfsel_pred['recoDWallZ']/198., dfsel_pred['totalLAPPDs']/1000., dfsel_pred['totalPMTs']/1000., dfsel_pred['vtxX']/150., dfsel_pred['vtxY']/200., dfsel_pred['vtxZ']/150. ]).T
+#dfsel_pred_n = pd.DataFrame([ dfsel_pred['DNNRecoLength']/600., dfsel_pred['TrueTrackLengthInMrd']/200., dfsel_pred['diffDirAbs'], dfsel_pred['recoDWallR']/152.4, dfsel_pred['recoDWallZ']/198., dfsel_pred['totalLAPPDs']/1000., dfsel_pred['totalPMTs']/1000., dfsel_pred['vtxX']/150., dfsel_pred['vtxY']/200., dfsel_pred['vtxZ']/150. ]).T
+dfsel_pred_n = pd.DataFrame([ dfsel_pred['DNNRecoLength']/600., dfsel_pred['TrueTrackLengthInMrd']/200., dfsel_pred['diffDirAbs'], dfsel_pred['recoDWallR'], dfsel_pred['recoDWallZ'], dfsel_pred['totalLAPPDs']/200., dfsel_pred['totalPMTs']/200., dfsel_pred['vtxX']/150., dfsel_pred['vtxY']/200., dfsel_pred['vtxZ']/150. ]).T
 
 #--- prepare training & test sample for BDT:
-arr_hi_E0 = np.array(dfsel_n[['DNNRecoLength','TrueTrackLengthInMrd','diffDirAbs','recoDWallR','recoDWallZ','totalLAPPDs','totalPMTs','vtxX','vtxY','vtxZ']])
-arr3_hi_E0 = np.array(dfsel[['trueKE']])
+#arr_hi_E0 = np.array(dfsel_n[['DNNRecoLength','TrueTrackLengthInMrd','diffDirAbs','recoDWallR','recoDWallZ','totalLAPPDs','totalPMTs','vtxX','vtxY','vtxZ']])
+#arr3_hi_E0 = np.array(dfsel[['trueKE']])
  
-#---- random split of events ----
-rnd_indices = np.random.rand(len(arr_hi_E0)) < 0.50
-#--- select events for training/test:
-arr_hi_E0B = arr_hi_E0[rnd_indices]
-arr2_hi_E_n = arr_hi_E0B #.reshape(arr_hi_E0B.shape + (-1,))
-arr3_hi_E = arr3_hi_E0[rnd_indices]
-#--- select events for prediction: -- in future we need to replace this with data sample!
-evts_to_predict = arr_hi_E0[~rnd_indices]
-evts_to_predict_n = evts_to_predict #.reshape(evts_to_predict.shape + (-1,))
-test_data_trueKE_hi_E = arr3_hi_E0[~rnd_indices]
+##---- random split of events ----
+#rnd_indices = np.random.rand(len(arr_hi_E0)) < 0.50
+##--- select events for training/test:
+#arr_hi_E0B = arr_hi_E0[rnd_indices]
+#arr2_hi_E_n = arr_hi_E0B #.reshape(arr_hi_E0B.shape + (-1,))
+#arr3_hi_E = arr3_hi_E0[rnd_indices]
+##--- select events for prediction: -- in future we need to replace this with data sample!
+#evts_to_predict = arr_hi_E0[~rnd_indices]
+#evts_to_predict_n = evts_to_predict #.reshape(evts_to_predict.shape + (-1,))
+#test_data_trueKE_hi_E = arr3_hi_E0[~rnd_indices]
 
 #printing..
-print('events for training: ',len(arr3_hi_E),' events for predicting: ',len(test_data_trueKE_hi_E)) 
-print('initial train shape: ',arr3_hi_E.shape," predict: ",test_data_trueKE_hi_E.shape)
+#print('events for training: ',len(arr3_hi_E),' events for predicting: ',len(test_data_trueKE_hi_E)) 
+#print('initial train shape: ',arr3_hi_E.shape," predict: ",test_data_trueKE_hi_E.shape)
+
+#prepare events for predicting 
+evts_to_predict_n= np.array(dfsel_pred_n[['DNNRecoLength','TrueTrackLengthInMrd','diffDirAbs','recoDWallR','recoDWallZ','totalLAPPDs','totalPMTs', 'vtxX','vtxY','vtxZ']])
+test_data_trueKE_hi_E = np.array(dfsel_pred[['trueKE']])
 
 n_estimators=1000
 
@@ -129,18 +138,18 @@ assert(df_final.shape[0]==df2.shape[0])
 #save results to .csv:  
 df_final.to_csv("Ereco_results.csv", float_format = '%.3f')
 
-#    nbins=np.arange(-100,100,2)
-#    fig,ax0=plt.subplots(ncols=1, sharey=True)#, figsize=(8, 6))
-#    cmap = sns.light_palette('b',as_cmap=True)
-#    f=ax0.hist(np.array(Y), nbins, histtype='step', fill=True, color='gold',alpha=0.75)
-#    ax0.set_xlim(-100.,100.)
-#    ax0.set_xlabel('$\Delta E/E$ [%]')
-#    ax0.set_ylabel('Number of Entries')
-#    ax0.xaxis.set_label_coords(0.95, -0.08)
-#    ax0.yaxis.set_label_coords(-0.1, 0.71)
-#    title = "mean = %.2f, std = %.2f " % (np.array(Y).mean(), np.array(Y).std())
-#    plt.title(title)
-#    plt.savefig("DE_E.png")
+nbins=np.arange(-100,100,2)
+fig,ax0=plt.subplots(ncols=1, sharey=True)#, figsize=(8, 6))
+cmap = sns.light_palette('b',as_cmap=True)
+f=ax0.hist(np.array(Y), nbins, histtype='step', fill=True, color='gold',alpha=0.75)
+ax0.set_xlim(-100.,100.)
+ax0.set_xlabel('$\Delta E/E$ [%]')
+ax0.set_ylabel('Number of Entries')
+ax0.xaxis.set_label_coords(0.95, -0.08)
+ax0.yaxis.set_label_coords(-0.1, 0.71)
+title = "mean = %.2f, std = %.2f " % (np.array(Y).mean(), np.array(Y).std())
+plt.title(title)
+plt.savefig("DE_E.png")
  
 #write in output .root file:
 #vtxX=dfsel_n['vtxX'][~rnd_indices]
