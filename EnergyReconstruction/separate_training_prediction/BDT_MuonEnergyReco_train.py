@@ -30,7 +30,7 @@ import pickle
 #--- evts for training:
 #infile = "../../LocalFolder/vars_Ereco.csv"
 #infile = "../data/vars_Ereco.csv"
-infile = "/Users/edrakopo/work/ANNIEReco_PythonScripts/vars_Ereco_train_05202019.csv"
+infile = "../TrackLengthReconstruction/vars_Ereco_train_05202019.csv"
 #----------------
 
 # Set TF random seed to improve reproducibility
