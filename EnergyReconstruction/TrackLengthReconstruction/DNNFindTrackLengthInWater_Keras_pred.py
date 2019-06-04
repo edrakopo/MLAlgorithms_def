@@ -22,12 +22,12 @@ from tensorflow.keras.callbacks import ModelCheckpoint
 #--------- File with events for reconstruction:
 #--- evts for training:
 #infile = "../data_forRecoLength_04202019.csv"
-infile = "../data_forRecoLength_05202019.csv"
+infile = "../data/data_forRecoLength_05202019.csv"
 #infile = "../LocalFolder/NEWdata_forRecoLength_9_10MRD.csv"
 #infile = "../LocalFolder/data_forRecoLength_9.csv"
 #--- evts for prediction:
 #infile2 = "../data_forRecoLength_04202019.csv"
-infile2 = "../data_forRecoLength_05202019.csv"
+infile2 = "../data/data_forRecoLength_05202019.csv"
 #infile2 = "../LocalFolder/NEWdata_forRecoLength_0_8MRD.csv"
 #infile2 = "../LocalFolder/data_forRecoLength_9.csv"
 #
