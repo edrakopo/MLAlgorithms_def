@@ -205,7 +205,7 @@ void LocalFindTrackLengthInWater()
         //std::cout<<"the track length in the water tank (1st approx) is: "<<lambda_max<<std::endl;
 
        //---------------------------------
-       //---- add values to tree for energy reconstruction:
+       //---- add values to tree for energy reconstruction - the values added to the BDT need to be normalised:
        ievt=ievt; //currententry;
        trueNeuE=1.*TrueNeutrinoEnergy;
        trueE=1.*trueEnergy;
@@ -213,10 +213,11 @@ void LocalFindTrackLengthInWater()
        vtxX2=vtxX; vtxY2=vtxY; vtxZ2=vtxZ;
        recoDWallR2      = recoDWallR/152.4;
        recoDWallZ2      = recoDWallZ/198.;
-       TrueTrackLengthInWater2 = TrueTrackLengthInWater*100.;//converting from m to cm //TrueTrackLengthInWater/500.;
        TrueTrackLengthInMrd2 = TrueTrackLengthInMrd/200.;
+       //--- 
+       TrueTrackLengthInWater2 = TrueTrackLengthInWater*100.;//converting from m to cm //TrueTrackLengthInWater/500.;
 
-               //----- write to .csv file - including variables for track length & energy reconstruction:
+        //----- write to .csv file - including variables for track length & energy reconstruction:
         for(int i=0; i<maxhits0;++i){
            csvfile<<lambda_vec[i]<<",";
         }
