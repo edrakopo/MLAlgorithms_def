@@ -62,7 +62,7 @@ assert(dfsel.isnull().any().any()==False)
 
 #--- normalisation-training sample:
 #dfsel_n = pd.DataFrame([ dfsel['DNNRecoLength']/600., dfsel['TrueTrackLengthInMrd']/200., dfsel['diffDirAbs'], dfsel['recoDWallR']/152.4, dfsel['recoDWallZ']/198., dfsel['totalLAPPDs']/1000., dfsel['totalPMTs']/1000., dfsel['vtxX']/150., dfsel['vtxY']/200., dfsel['vtxZ']/150. ]).T
-dfsel_n = pd.DataFrame([ dfsel['DNNRecoLength']/600., dfsel['TrueTrackLengthInMrd']/200., dfsel['diffDirAbs'], dfsel['recoDWallR'], dfsel['recoDWallZ'], dfsel['totalLAPPDs']/200., dfsel['totalPMTs']/200., dfsel['vtxX']/150., dfsel['vtxY']/200., dfsel['vtxZ']/150. ]).T
+dfsel_n = pd.DataFrame([ dfsel['DNNRecoLength']/600., dfsel['TrueTrackLengthInMrd'], dfsel['diffDirAbs'], dfsel['recoDWallR'], dfsel['recoDWallZ'], dfsel['totalLAPPDs']/200., dfsel['totalPMTs']/200., dfsel['vtxX']/150., dfsel['vtxY']/200., dfsel['vtxZ']/150. ]).T
 print("chehck normalisation: ", dfsel_n.head())
 
 #--- prepare training & test sample for BDT:
@@ -85,9 +85,9 @@ print('events for training: ',len(arr3_hi_E),' events for predicting: ',len(test
 print('initial train shape: ',arr3_hi_E.shape," predict: ",test_data_trueKE_hi_E.shape)
 
 ########### BDTG ############
-n_estimators=1000
-params = {'n_estimators':n_estimators, 'max_depth': 50,
-          'learning_rate': 0.01, 'loss': 'lad'} 
+n_estimators=500
+params = {'n_estimators':n_estimators, 'max_depth': 100,
+          'learning_rate': 0.025, 'loss': 'lad'} 
 
 print("arr2_hi_E_n.shape: ",arr2_hi_E_n.shape)
 #--- select 70% of sample for training and 30% for testing:
