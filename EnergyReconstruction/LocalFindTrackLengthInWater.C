@@ -62,10 +62,9 @@ double find_lambda(double xmu_rec,double ymu_rec,double zmu_rec,double xrecDir,d
 void LocalFindTrackLengthInWater()
 {
 
-   int ievt=0; float totalLAPPDs2=0; float totalPMTs2=0;
-   float trueNeuE=0; float trueE=0;
+   int ievt=0; float trueNeuE=0; float trueE=0;
    float TrueTrackLengthInWater2=0; float TrueTrackLengthInMrd2=0; float recoDWallR2=0; float recoDWallZ2=0;
-   float lambda_max_2=0; float diffDirAbs2=0; float recolength=0;
+   float diffDirAbs2=0; 
    float dirX2=0; float dirY2=0; float dirZ2=0;
    float vtxX2=0; float vtxY2=0; float vtxZ2=0;
 
@@ -183,8 +182,6 @@ void LocalFindTrackLengthInWater()
         double recoVtxR2 = vtxX*vtxX + vtxZ*vtxZ;//vtxY*vtxY;
         double recoDWallR = 152.4-TMath::Sqrt(recoVtxR2);
         double recoDWallZ = 198-TMath::Abs(vtxY);
-        recoDWallR2      = recoDWallR/152.4;
-        recoDWallZ2      = recoDWallZ/198.;
 
         for(int k=0; k<nhits; k++){
           //std::cout<<"k: "<<k<<", "<<digitT->at(k)<<" | "<<digitType->at(k)<<std::endl;
@@ -216,10 +213,7 @@ void LocalFindTrackLengthInWater()
        vtxX2=vtxX; vtxY2=vtxY; vtxZ2=vtxZ;
        recoDWallR2      = recoDWallR/152.4;
        recoDWallZ2      = recoDWallZ/198.;
-       lambda_max_2     = TMath::Abs(lambda_max)/500;
-       totalPMTs2=1.*totalPMTs/1000.;
-       totalLAPPDs2=1.*totalLAPPDs/1000.;
-       TrueTrackLengthInWater2 = TrueTrackLengthInWater*100.; //TrueTrackLengthInWater/500.;
+       TrueTrackLengthInWater2 = TrueTrackLengthInWater*100.;//converting from m to cm //TrueTrackLengthInWater/500.;
        TrueTrackLengthInMrd2 = TrueTrackLengthInMrd/200.;
 
                //----- write to .csv file - including variables for track length & energy reconstruction:
