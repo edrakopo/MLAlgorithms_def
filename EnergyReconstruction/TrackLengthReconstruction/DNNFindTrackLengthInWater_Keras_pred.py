@@ -22,12 +22,14 @@ from tensorflow.keras.callbacks import ModelCheckpoint
 #--------- File with events for reconstruction:
 #--- evts for training:
 #infile = "../data_forRecoLength_04202019.csv"
-infile = "../data/data_forRecoLength_05202019.csv"
+#infile = "../data/data_forRecoLength_05202019.csv"
+infile = "../data/data_forRecoLength_06082019.csv"
 #infile = "../LocalFolder/NEWdata_forRecoLength_9_10MRD.csv"
 #infile = "../LocalFolder/data_forRecoLength_9.csv"
 #--- evts for prediction:
 #infile2 = "../data_forRecoLength_04202019.csv"
-infile2 = "../data/data_forRecoLength_05202019.csv"
+#infile2 = "../data/data_forRecoLength_05202019.csv"
+infile2 = "../data/data_forRecoLength_06082019.csv"
 #infile2 = "../LocalFolder/NEWdata_forRecoLength_0_8MRD.csv"
 #infile2 = "../LocalFolder/data_forRecoLength_9.csv"
 #
@@ -61,6 +63,7 @@ test_x = features2[1000:]
 test_y = labels2[1000:]
 #    print("len(train_y): ",len(train_y)," len(test_y): ", len(test_y))
 print("train sample features shape: ", train_x.shape," train sample label shape: ", train_y.shape)
+print("test sample features shape: ", test_x.shape," test sample label shape: ", test_y.shape)
 
 # Scale data (training set) to 0 mean and unit standard deviation.
 scaler = preprocessing.StandardScaler()
@@ -68,9 +71,9 @@ train_x = scaler.fit_transform(train_x)
 
 # create model
 model = Sequential()
-model.add(Dense(50, input_dim=2203, kernel_initializer='he_normal', activation='relu'))
-model.add(Dense(5, kernel_initializer='he_normal', activation='relu'))
-model.add(Dense(1, kernel_initializer='he_normal', activation='relu'))
+model.add(Dense(25, input_dim=2203, kernel_initializer='normal', activation='relu'))
+model.add(Dense(25, kernel_initializer='normal', activation='relu'))
+model.add(Dense(1, kernel_initializer='normal', activation='relu'))
 
 # load weights
 model.load_weights("weights_bets.hdf5")
@@ -124,9 +127,13 @@ assert(df_final.shape[0]==df.shape[0])
 
 #df_final.to_csv("../LocalFolder/vars_Ereco.csv", float_format = '%.3f')
 #df_final.to_csv("vars_Ereco_04202019.csv", float_format = '%.3f')
-df_final.to_csv("vars_Ereco_05202019.csv", float_format = '%.3f')
-df_final[:600].to_csv("vars_Ereco_train_05202019.csv", float_format = '%.3f') #to be used for the energy BDT training
-df_final[600:].to_csv("vars_Ereco_pred_05202019.csv", float_format = '%.3f') #to be used for the energy prediction
+#df_final.to_csv("vars_Ereco_05202019.csv", float_format = '%.3f')
+#df_final[:600].to_csv("vars_Ereco_train_05202019.csv", float_format = '%.3f') #to be used for the energy BDT training
+#df_final[600:].to_csv("vars_Ereco_pred_05202019.csv", float_format = '%.3f') #to be used for the energy prediction
+
+df_final.to_csv("vars_Ereco_06082019.csv", float_format = '%.3f')
+df_final[:1000].to_csv("vars_Ereco_train_06082019.csv", float_format = '%.3f')
+df_final[1000:].to_csv("vars_Ereco_pred_06082019.csv", float_format = '%.3f')
 
 #---if asserts fails check dimensions with these print outs:
 #print("df: ",df.head())

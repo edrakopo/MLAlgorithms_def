@@ -69,7 +69,7 @@ print("train sample features shape: ", train_x.shape," train sample label shape:
 scaler = preprocessing.StandardScaler()
 train_x = scaler.fit_transform(train_x)
 
-def create_model(optimizer='Adamax', init_mode='he_normal', activation='relu', neurons1=50, neurons2=15):
+def create_model(optimizer='Adamax', init_mode='normal', activation='relu', neurons1=25, neurons2=25):
     # create model
     model = Sequential()
     model.add(Dense(neurons1, input_dim=2203, kernel_initializer=init_mode, activation=activation))

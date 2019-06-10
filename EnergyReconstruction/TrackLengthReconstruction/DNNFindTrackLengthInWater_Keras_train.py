@@ -23,12 +23,13 @@ from tensorflow.keras.wrappers.scikit_learn import KerasRegressor
 #--------- File with events for reconstruction:
 #--- evts for training:
 #infile = "../data_forRecoLength_04202019.csv"
-infile = "../data/data_forRecoLength_05202019.csv"
+#infile = "../data/data_forRecoLength_05202019.csv"
+infile = "../data/data_forRecoLength_06082019.csv"
 #infile = "../LocalFolder/NEWdata_forRecoLength_9_10MRD.csv"
 #infile = "../LocalFolder/data_forRecoLength_9.csv"
 #--- evts for prediction:
 #infile2 = "../data_forRecoLength_04202019.csv"
-infile2 = "../data/data_forRecoLength_05202019.csv"
+#infile2 = "../data/data_forRecoLength_05202019.csv"
 #infile2 = "../LocalFolder/NEWdata_forRecoLength_0_8MRD.csv"
 #infile2 = "../LocalFolder/data_forRecoLength_9.csv"
 #
@@ -59,9 +60,9 @@ train_x = scaler.fit_transform(train_x)
 def create_model():
     # create model
     model = Sequential()
-    model.add(Dense(50, input_dim=2203, kernel_initializer='he_normal', activation='relu'))
-    model.add(Dense(5, kernel_initializer='he_normal', activation='relu'))
-    model.add(Dense(1, kernel_initializer='he_normal', activation='relu'))
+    model.add(Dense(25, input_dim=2203, kernel_initializer='normal', activation='relu'))
+    model.add(Dense(25, kernel_initializer='normal', activation='relu'))
+    model.add(Dense(1, kernel_initializer='normal', activation='relu'))
     # Compile model
     model.compile(loss='mean_squared_error', optimizer='Adamax', metrics=['accuracy'])
     return model
