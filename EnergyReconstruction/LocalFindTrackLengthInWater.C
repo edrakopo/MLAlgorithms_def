@@ -69,7 +69,9 @@ void LocalFindTrackLengthInWater()
    float vtxX2=0; float vtxY2=0; float vtxZ2=0;
 
    ofstream csvfile;
-   csvfile.open ("data_forRecoLength_05202019.csv");
+   //csvfile.open ("data_forRecoLength_05202019.csv");
+   csvfile.open ("data/data_forRecoLength_06082019.csv");
+
    int maxhits0=1100; 
       //--- write to file: ---//
       //if(first==1 && deny_access==0){
@@ -118,7 +120,8 @@ void LocalFindTrackLengthInWater()
 
    char fname[100]; int count1=0;
    //sprintf(fname,"PhaseIIReco_SuccessfulReco_04202019.root");//,i);
-   sprintf(fname,"PMTLAPPDReco_743Runs_05202019.root");//,i);
+   //sprintf(fname,"PMTLAPPDReco_743Runs_05202019.root");//,i);
+   sprintf(fname,"data/PMTLAPPDReco_All_06082019.root");
    TFile *input=new TFile(fname,"READONLY");
    cout<<"input file: "<<fname<<endl;
 

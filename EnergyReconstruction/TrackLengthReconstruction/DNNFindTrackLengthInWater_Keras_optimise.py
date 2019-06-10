@@ -24,12 +24,13 @@ from tensorflow.keras.wrappers.scikit_learn import KerasRegressor
 #--------- File with events for reconstruction:
 #--- evts for training:
 #infile = "../data_forRecoLength_04202019.csv"
-infile = "../data/data_forRecoLength_05202019.csv"
+#infile = "../data/data_forRecoLength_05202019.csv"
+infile = "../data/data_forRecoLength_06082019.csv"
 #infile = "../LocalFolder/NEWdata_forRecoLength_9_10MRD.csv"
 #infile = "../LocalFolder/data_forRecoLength_9.csv"
 #--- evts for prediction:
 #infile2 = "../data_forRecoLength_04202019.csv"
-infile2 = "../data/data_forRecoLength_05202019.csv"
+#infile2 = "../data/data_forRecoLength_05202019.csv"
 #infile2 = "../LocalFolder/NEWdata_forRecoLength_0_8MRD.csv"
 #infile2 = "../LocalFolder/data_forRecoLength_9.csv"
 #
@@ -46,12 +47,12 @@ Dataset = np.array(pd.read_csv(filein))
 features, lambdamax, labels, rest = np.split(Dataset,[2203,2204,2205],axis=1)
 
 #--- events for predicting
-filein2 = open(str(infile2))
-print("events for prediction in: ",filein2)
-Dataset2 = np.array(pd.read_csv(filein2))
-features2, lambdamax2, labels2, rest2 = np.split(Dataset2,[2203,2204,2205],axis=1)
-print( "lambdamax2 ", lambdamax2[:2], labels[:2])
-print(features2[0])
+#filein2 = open(str(infile2))
+#print("events for prediction in: ",filein2)
+#Dataset2 = np.array(pd.read_csv(filein2))
+#features2, lambdamax2, labels2, rest2 = np.split(Dataset2,[2203,2204,2205],axis=1)
+#print( "lambdamax2 ", lambdamax2[:2], labels[:2])
+#print(features2[0])
 
 #split events in train/test samples:
 num_events, num_pixels = features.shape
