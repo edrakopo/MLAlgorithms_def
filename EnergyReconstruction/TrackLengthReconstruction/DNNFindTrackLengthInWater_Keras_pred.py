@@ -131,7 +131,7 @@ assert(df_final.shape[0]==df.shape[0])
 #df_final[:600].to_csv("vars_Ereco_train_05202019.csv", float_format = '%.3f') #to be used for the energy BDT training
 #df_final[600:].to_csv("vars_Ereco_pred_05202019.csv", float_format = '%.3f') #to be used for the energy prediction
 
-#df_final.to_csv("vars_Ereco_06082019.csv", float_format = '%.3f')
+df_final.to_csv("vars_Ereco_06082019.csv", float_format = '%.3f')
 df_final[:1000].to_csv("vars_Ereco_train_06082019.csv", float_format = '%.3f')
 df_final[1000:].to_csv("vars_Ereco_pred_06082019.csv", float_format = '%.3f')
 
