@@ -24,12 +24,14 @@ from tensorflow.keras.callbacks import ModelCheckpoint
 #infile = "../data_forRecoLength_04202019.csv"
 #infile = "../data/data_forRecoLength_05202019.csv"
 infile = "../data/data_forRecoLength_06082019.csv"
+#infile = "../data/data_forRecoLength_06082019CC0pi.csv"
 #infile = "../LocalFolder/NEWdata_forRecoLength_9_10MRD.csv"
 #infile = "../LocalFolder/data_forRecoLength_9.csv"
 #--- evts for prediction:
 #infile2 = "../data_forRecoLength_04202019.csv"
 #infile2 = "../data/data_forRecoLength_05202019.csv"
 infile2 = "../data/data_forRecoLength_06082019.csv"
+#infile2 = "../data/data_forRecoLength_06082019CC0pi.csv"
 #infile2 = "../LocalFolder/NEWdata_forRecoLength_0_8MRD.csv"
 #infile2 = "../LocalFolder/data_forRecoLength_9.csv"
 #
@@ -134,6 +136,10 @@ assert(df_final.shape[0]==df.shape[0])
 df_final.to_csv("vars_Ereco_06082019.csv", float_format = '%.3f')
 df_final[:1000].to_csv("vars_Ereco_train_06082019.csv", float_format = '%.3f')
 df_final[1000:].to_csv("vars_Ereco_pred_06082019.csv", float_format = '%.3f')
+
+#df_final.to_csv("vars_Ereco_06082019CC0pi.csv", float_format = '%.3f')
+#df_final[:1000].to_csv("vars_Ereco_train_06082019CC0pi.csv", float_format = '%.3f')
+#df_final[1000:].to_csv("vars_Ereco_pred_06082019CC0pi.csv", float_format = '%.3f')
 
 #---if asserts fails check dimensions with these print outs:
 #print("df: ",df.head())

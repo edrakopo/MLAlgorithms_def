@@ -25,6 +25,7 @@ from tensorflow.keras.wrappers.scikit_learn import KerasRegressor
 #infile = "../data_forRecoLength_04202019.csv"
 #infile = "../data/data_forRecoLength_05202019.csv"
 infile = "../data/data_forRecoLength_06082019.csv"
+#infile = "../data/data_forRecoLength_06082019CC0pi.csv"
 #infile = "../LocalFolder/NEWdata_forRecoLength_9_10MRD.csv"
 #infile = "../LocalFolder/data_forRecoLength_9.csv"
 #--- evts for prediction:
