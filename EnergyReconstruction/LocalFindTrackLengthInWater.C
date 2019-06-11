@@ -71,6 +71,7 @@ void LocalFindTrackLengthInWater()
    ofstream csvfile;
    //csvfile.open ("data_forRecoLength_05202019.csv");
    csvfile.open ("data/data_forRecoLength_06082019.csv");
+   //csvfile.open ("data/data_forRecoLength_06082019CC0pi.csv"); //events with no pi's
 
    int maxhits0=1100; 
       //--- write to file: ---//
@@ -135,6 +136,7 @@ void LocalFindTrackLengthInWater()
    std::vector<double> *digitX=0; std::vector<double> *digitY=0;  std::vector<double> *digitZ=0;
    std::vector<double> *digitT=0; std::vector<int>  *digitType=0;
    float trueMuonEnergy=0.;
+   int Pi0Count,PiPlusCount,PiMinusCount;
 
    regTree->SetBranchAddress("runNumber", &run);
    regTree->SetBranchAddress("eventNumber", &event);
@@ -162,6 +164,9 @@ void LocalFindTrackLengthInWater()
    //regTree->SetBranchAddress("TrueMuonAngle", &TrueMuonAngle);
    regTree->SetBranchAddress("deltaVtxR", &deltaVtxR);
    regTree->SetBranchAddress("deltaAngle", &deltaAngle);
+   regTree->SetBranchAddress("Pi0Count", &Pi0Count);
+   regTree->SetBranchAddress("PiPlusCount", &PiPlusCount);
+   regTree->SetBranchAddress("PiMinusCount", &PiMinusCount);
 
   for (Long64_t ievt=0; ievt<regTree->GetEntries();ievt++) {
    regTree->GetEntry(ievt);
@@ -174,7 +179,7 @@ void LocalFindTrackLengthInWater()
    if(recoVtxFOM>0){ count1++;
      //if((*TrueInteractionType == "QES - Weak[CC]") && TrueTrackLengthInMrd>0.){
       //cout<<"TrueTrackLengthInMrd: "<<TrueTrackLengthInMrd<<endl;
-      if(TrueTrackLengthInMrd>0.){
+      if(TrueTrackLengthInMrd>0.){// && Pi0Count==0 && PiPlusCount==0 && PiMinusCount==0){
         //std::cout<<"current entry: "<<currententry<<" with nhits: "<<nhits<<std::endl;
         //cout<<"ievt: "<<ievt<<" trueEnergy: "<<trueEnergy<<endl;
 
