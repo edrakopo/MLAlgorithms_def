@@ -34,7 +34,8 @@ from sklearn.model_selection import RandomizedSearchCV, GridSearchCV
 #-------- File with events for reconstruction:
 #--- evts for training:
 #infile = "../../../LocalFolder/vars_Ereco.csv"
-infile = "../TrackLengthReconstruction/vars_Ereco_train_05202019.csv"
+#infile = "../TrackLengthReconstruction/vars_Ereco_train_05202019.csv"
+infile = "../TrackLengthReconstruction/vars_Ereco_train_06082019.csv"
 #----------------
 
 # Set TF random seed to improve reproducibility
@@ -74,7 +75,7 @@ arr_hi_E0 = np.array(dfsel_n[['DNNRecoLength','TrueTrackLengthInMrd','diffDirAbs
 arr3_hi_E0 = np.array(dfsel[['trueKE']])
  
 #---- random split of events ----
-rnd_indices = np.random.rand(len(arr_hi_E0)) < 0.50
+rnd_indices = np.random.rand(len(arr_hi_E0)) < 1. #< 0.50
 #--- select events for training/test:
 arr_hi_E0B = arr_hi_E0[rnd_indices]
 arr2_hi_E_n = arr_hi_E0B #.reshape(arr_hi_E0B.shape + (-1,))
@@ -119,7 +120,7 @@ def optimise_model(model, alg_name, search_method, params):
 params = {'n_estimators':[100, 200, 500, 600, 1000], 
           'max_depth': [10, 50, 100],
           'learning_rate': [0.01, 0.025, 0.05, 0.1], 
-          'loss': ['lad']} 
+          'loss': ['lad', 'ls', 'huber']} 
     
 net_hi_E = ensemble.GradientBoostingRegressor(**params)
 #net_hi_E.fit(arr2_hi_E_train, arr3_hi_E_train)

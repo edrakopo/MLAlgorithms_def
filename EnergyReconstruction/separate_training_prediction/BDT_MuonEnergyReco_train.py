@@ -30,7 +30,8 @@ import pickle
 #--- evts for training:
 #infile = "../../LocalFolder/vars_Ereco.csv"
 #infile = "../data/vars_Ereco.csv"
-infile = "../TrackLengthReconstruction/vars_Ereco_train_05202019.csv"
+#infile = "../TrackLengthReconstruction/vars_Ereco_train_05202019.csv"
+infile = "../TrackLengthReconstruction/vars_Ereco_train_06082019.csv"
 #----------------
 
 # Set TF random seed to improve reproducibility
@@ -70,24 +71,24 @@ arr_hi_E0 = np.array(dfsel_n[['DNNRecoLength','TrueTrackLengthInMrd','diffDirAbs
 arr3_hi_E0 = np.array(dfsel[['trueKE']])
  
 #---- random split of events ----
-rnd_indices = np.random.rand(len(arr_hi_E0)) < 0.50
+rnd_indices = np.random.rand(len(arr_hi_E0)) < 1. #< 0.50
 #--- select events for training/test:
 arr_hi_E0B = arr_hi_E0[rnd_indices]
 arr2_hi_E_n = arr_hi_E0B #.reshape(arr_hi_E0B.shape + (-1,))
 arr3_hi_E = arr3_hi_E0[rnd_indices]
-#--- select events for prediction: -- in future we need to replace this with data sample!
-evts_to_predict = arr_hi_E0[~rnd_indices]
-evts_to_predict_n = evts_to_predict #.reshape(evts_to_predict.shape + (-1,))
-test_data_trueKE_hi_E = arr3_hi_E0[~rnd_indices]
+##--- select events for prediction: -- in future we need to replace this with data sample!
+#evts_to_predict = arr_hi_E0[~rnd_indices]
+#evts_to_predict_n = evts_to_predict #.reshape(evts_to_predict.shape + (-1,))
+#test_data_trueKE_hi_E = arr3_hi_E0[~rnd_indices]
 
 #printing..
-print('events for training: ',len(arr3_hi_E),' events for predicting: ',len(test_data_trueKE_hi_E)) 
-print('initial train shape: ',arr3_hi_E.shape," predict: ",test_data_trueKE_hi_E.shape)
+print('events for training: ',len(arr3_hi_E)) #,' events for predicting: ',len(test_data_trueKE_hi_E)) 
+print('initial train shape: ',arr3_hi_E.shape) #," predict: ",test_data_trueKE_hi_E.shape)
 
 ########### BDTG ############
 n_estimators=500
-params = {'n_estimators':n_estimators, 'max_depth': 100,
-          'learning_rate': 0.025, 'loss': 'lad'} 
+params = {'n_estimators':n_estimators, 'max_depth': 10,
+          'learning_rate': 0.05, 'loss': 'lad'} 
 
 print("arr2_hi_E_n.shape: ",arr2_hi_E_n.shape)
 #--- select 70% of sample for training and 30% for testing:
