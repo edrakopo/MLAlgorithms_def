@@ -4,7 +4,8 @@ import numpy as np
 import ROOT
 
 #infile = "vars_Ereco_04202019.csv"
-infile = "vars_Ereco_05202019.csv"
+#infile = "vars_Ereco_05202019.csv"
+infile = "vars_Ereco_06082019.csv"
 
 filein = open(str(infile))
 print("number of events: ",filein)
