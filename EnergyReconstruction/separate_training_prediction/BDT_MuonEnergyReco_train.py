@@ -32,6 +32,7 @@ import pickle
 #infile = "../data/vars_Ereco.csv"
 #infile = "../TrackLengthReconstruction/vars_Ereco_train_05202019.csv"
 infile = "../TrackLengthReconstruction/vars_Ereco_train_06082019.csv"
+#infile = "../TrackLengthReconstruction/vars_Ereco_train_06082019CC0pi.csv"
 #----------------
 
 # Set TF random seed to improve reproducibility

@@ -34,6 +34,7 @@ import seaborn as sns
 #infile2 = "../../LocalFolder/vars_Ereco.csv"
 #infile2 = "../TrackLengthReconstruction/vars_Ereco_pred_05202019.csv"
 infile2 = "../TrackLengthReconstruction/vars_Ereco_pred_06082019.csv"
+#infile2 = "../TrackLengthReconstruction/vars_Ereco_pred_06082019CC0pi.csv"
 #----------------
 
 # Set TF random seed to improve reproducibility
