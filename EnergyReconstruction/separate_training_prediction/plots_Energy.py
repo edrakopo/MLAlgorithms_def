@@ -2,6 +2,14 @@ import matplotlib.pyplot as plt
 import pandas as pd
 import numpy as np
 import ROOT
+import matplotlib.pylab as pylab
+params = {'legend.fontsize': 'x-large',
+#          'figure.figsize': (15, 5),
+         'axes.labelsize': 'x-large',
+         'axes.titlesize':'x-large',
+         'xtick.labelsize':'x-large',
+         'ytick.labelsize':'x-large'}
+pylab.rcParams.update(params)
 
 infile = "Ereco_results.csv"
 
@@ -23,19 +31,22 @@ plt.close(fig)
 
 nbins=np.arange(-100,100,2)
 data = 100.*((Etrue-Ereco)/(1.*Etrue))
-fig0,ax0=plt.subplots(ncols=1, sharey=True)#, figsize=(8, 6))
+with plt.style.context("seaborn-white"):
+#    fig, ax = plt.subplots()
+#    Se_data.plot(kind="barh", ax=ax, title="With Border")
+     fig0,ax0=plt.subplots(ncols=1, sharey=True)#, figsize=(8, 6))
 #cmap = sns.light_palette('b',as_cmap=True) 
-f=ax0.hist(data, nbins, histtype='step', fill=True, color='gold',alpha=0.75)
-ax0.set_xlim(-100.,100.)
-ax0.set_xlabel('$\Delta E/E$ [%]')
-ax0.set_ylabel('Number of Entries')
-ax0.xaxis.set_label_coords(0.95, -0.08)
-ax0.yaxis.set_label_coords(-0.1, 0.71)
-title = "mean = %.2f, std = %.2f " % (data.mean(), data.std())
-plt.title(title)
-plt.show()
-#fig0.savefig('DE_E.png')   # save the figure to file
-plt.close(fig0)
+     f=ax0.hist(data, nbins, histtype='step', fill=True, color='darkred',alpha=0.75)
+     ax0.set_xlim(-100.,100.)
+     ax0.set_xlabel('$\Delta E/E$ [%]')
+     ax0.set_ylabel('Number of Entries')
+     ax0.xaxis.set_label_coords(0.95, -0.08)
+     ax0.yaxis.set_label_coords(-0.1, 0.71)
+     title = "mean = %.2f, std = %.2f " % (data.mean(), data.std())
+     plt.title(title)
+     plt.show()
+     fig0.savefig('DE_E_feat.png')   # save the figure to file
+     plt.close(fig0)
 
 nbins2=np.arange(0,2000,20)
 fig1,ax1=plt.subplots(ncols=1, sharey=False)#, figsize=(8, 6))
