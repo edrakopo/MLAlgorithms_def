@@ -89,10 +89,6 @@ print('predicting...')
 x_transformed = scaler.transform(test_x)
 y_predicted = model.predict(x_transformed)
 
-# estimate accuracy on whole dataset using loaded weights
-scores = model.evaluate(test_x, test_y, verbose=0)
-print("%s: %.2f%%" % (model.metrics_names[1], scores[1]*100))
-
 # Score with sklearn.
 score_sklearn = metrics.mean_squared_error(y_predicted, test_y)
 print('MSE (sklearn): {0:f}'.format(score_sklearn))
