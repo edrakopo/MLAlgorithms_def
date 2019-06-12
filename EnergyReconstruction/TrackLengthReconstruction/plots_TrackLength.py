@@ -2,6 +2,14 @@ import matplotlib.pyplot as plt
 import pandas as pd
 import numpy as np
 import ROOT
+import matplotlib.pylab as pylab
+params = {'legend.fontsize': 'x-large',
+          'figure.figsize': (9, 7),
+         'axes.labelsize': 'x-large',
+         'axes.titlesize':'x-large',
+         'xtick.labelsize':'x-large',
+         'ytick.labelsize':'x-large'}
+pylab.rcParams.update(params)
 
 #infile = "vars_Ereco_04202019.csv"
 #infile = "vars_Ereco_05202019.csv"
