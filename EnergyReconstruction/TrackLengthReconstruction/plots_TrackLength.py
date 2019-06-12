@@ -6,6 +6,7 @@ import ROOT
 #infile = "vars_Ereco_04202019.csv"
 #infile = "vars_Ereco_05202019.csv"
 infile = "vars_Ereco_06082019.csv"
+#infile = "vars_Ereco_06082019CC0pi.csv"
 
 filein = open(str(infile))
 print("number of events: ",filein)
@@ -66,7 +67,7 @@ plt.close(fig1)
 data = abs(y_predicted-test_y)
 dataprev = abs(lambdamax_test-test_y)
 #nbins=np.arange(0,200,10)
-nbins=np.arange(0,400,20)
+nbins=np.arange(0.,400.,5)
 ##n, bins, patches = plt.hist(data, 100, alpha=1,normed='true')
 fig2,ax2=plt.subplots(ncols=1, sharey=False)#, figsize=(8, 6))
 f0=ax2.hist(data, nbins, histtype='step', fill=False, color='blue',alpha=0.75) 
@@ -74,6 +75,8 @@ f1=ax2.hist(dataprev, nbins, histtype='step', fill=False, color='red',alpha=0.75
 #ax.set_xlim(0.,200.)
 ax2.set_xlabel('$\Delta R = L_{Reco}-L_{MC}$ [cm]')
 ax2.legend(('NEW','Previous'))
+ax2.xaxis.set_ticks(np.arange(0., 425., 25))
+ax2.tick_params(axis='x', which='minor', bottom=False)
 ##ax.set_ylabel('Number of Entries [%]')
 ##ax.xaxis.set_label_coords(0.95, -0.08)
 ##ax.yaxis.set_label_coords(-0.1, 0.71)
@@ -113,9 +116,9 @@ for i,r in data.items():
        count_med +=1
     if r<50.:
        count_good +=1
-print("Percentage of good events: ", 100.*count_good/len(data))
-print("Percentage of med events: ", 100.*count_med/len(data))
-print("Percentage of bad events: ", 100.*count_bad/len(data))
+print("Percentage of good events(<50cm): ", 100.*count_good/len(data))
+print("Percentage of med events(50cm<=r<100cm): ", 100.*count_med/len(data))
+print("Percentage of bad events(r>=100cm): ", 100.*count_bad/len(data))
 
 print("checking..."," len(test_y): ",len(test_y)," len(y_predicted): ", len(y_predicted))
 
