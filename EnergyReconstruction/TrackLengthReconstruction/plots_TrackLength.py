@@ -5,10 +5,10 @@ import ROOT
 import matplotlib.pylab as pylab
 params = {'legend.fontsize': 'x-large',
           'figure.figsize': (9, 7),
-         'axes.labelsize': 'x-large',
-         'axes.titlesize':'x-large',
-         'xtick.labelsize':'x-large',
-         'ytick.labelsize':'x-large'}
+          'axes.labelsize': 'x-large',
+          'axes.titlesize':'x-large',
+          'xtick.labelsize':'x-large',
+          'ytick.labelsize':'x-large'}
 pylab.rcParams.update(params)
 
 #infile = "vars_Ereco_04202019.csv"

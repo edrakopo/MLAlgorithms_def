@@ -4,7 +4,7 @@ import numpy as np
 import ROOT
 import matplotlib.pylab as pylab
 params = {'legend.fontsize': 'x-large',
-#          'figure.figsize': (15, 5),
+#          'figure.figsize': (9, 7),
          'axes.labelsize': 'x-large',
          'axes.titlesize':'x-large',
          'xtick.labelsize':'x-large',
