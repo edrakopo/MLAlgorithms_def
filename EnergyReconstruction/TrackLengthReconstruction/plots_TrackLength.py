@@ -25,6 +25,9 @@ print("df00.head() ",df00.head())
 lambdamax_test = df00['lambda_max']
 test_y = df00['TrueTrackLengthInWater']
 y_predicted = df00['DNNRecoLength']
+TrueTrackLengthInWater = df00['TrueTrackLengthInWater'] 
+trueKE = df00['trueKE']
+TrueTrackLengthInMrd = 200.*df00['TrueTrackLengthInMrd'] 
 #recoVtxFOM = df00['recoVtxFOM']
 #deltaVtxR = df00['deltaVtxR']
 #deltaAngle = df00['deltaAngle']
@@ -142,6 +145,34 @@ line.SetLineColor(2)
 canvas.Draw()
 line.Draw("same")
 canvas.SaveAs("MClength_newrecolength.png")
+
+#---check energy dependence with track length:
+canvas = ROOT.TCanvas()
+canvas.cd(1)
+th2f = ROOT.TH2F("True_RecoLength", "; E_{MC,muon} [MeV]; MC Track Length in Water [cm]", 20, 0, 2000., 100, 0., 400.)
+for i in range(len(trueKE)):
+    th2f.Fill(trueKE[i], TrueTrackLengthInWater[i])
+#line = ROOT.TLine(0.,0.,400.,400.)
+th2f.SetStats(0)
+th2f.Draw("ColZ")
+#line.SetLineColor(2)
+canvas.Draw()
+#line.Draw("same")
+canvas.SaveAs("Emu_MClengthwater.png")
+
+canvas = ROOT.TCanvas()
+canvas.cd(1)
+th2f = ROOT.TH2F("True_RecoLength", "; E_{MC,muon} [MeV]; MC Track Length in MRD [cm]", 20, 0, 2000., 100, 0., 400.)
+for i in range(len(trueKE)):
+    th2f.Fill(trueKE[i], TrueTrackLengthInMrd[i])
+#line = ROOT.TLine(0.,0.,400.,400.)
+th2f.SetStats(0)
+th2f.Draw("ColZ")
+#line.SetLineColor(2)
+canvas.Draw()
+#line.Draw("same")
+canvas.SaveAs("Emu_MClengthMRD.png")
+
 
 #c1 = ROOT.TCanvas()
 #c1.cd(1)
