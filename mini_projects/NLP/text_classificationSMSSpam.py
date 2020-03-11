@@ -20,5 +20,21 @@ def remove_punct(text):
     #text_nopunct = text.replace((char,"") for char in text if char not in string.punctuation)
     return text_nopunct
 
-data['body_text_clean'] =data.text.apply(lambda x:remove_punct(x))
+data['body_text_clean'] = data.text.apply(lambda x:remove_punct(x))
 print(data.head())
+
+#Tokenization
+import re
+
+#function to tokenize words:
+def tokenize(text):
+    tokens = re.split('\W+',text) #\W+ means that either a word character(A-Za-z0-9_) or a dash(-) can go there
+    return tokens
+
+data['text_tokenized'] = data.text.apply(lambda x:tokenize(x))
+print(data.head())
+
+#Remove stopwords
+import nltk
+
+
