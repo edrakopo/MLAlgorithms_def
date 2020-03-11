@@ -1,5 +1,7 @@
 import nltk
 #nltk.download() 
+#nltk.download('stopwords')
+#nltk.download('wordnet')
 
 import pandas as pd
 #Reading file:
@@ -9,8 +11,8 @@ data = pd.DataFrame(data.text.str.split(',',1).tolist(),
 print(data.head())
 #print(data.labels)
 
-#Preprocessing data
-#remove punctuation
+### ---- Preprocessing data --- ###
+#Remove Punctuation
 import string
 print("punctuation: ",string.punctuation)
 
@@ -35,6 +37,45 @@ data['text_tokenized'] = data.text.apply(lambda x:tokenize(x))
 print(data.head())
 
 #Remove stopwords
-import nltk
+stopword = nltk.corpus.stopwords.words('english') #all english stopwords
 
+def remove_stopwords(tokenized_list):
+    text = [word for word in tokenized_list if word not in stopword]
+    return text
+
+data['text_nostopwords'] = data['text_tokenized'].apply(lambda x:remove_stopwords(x))
+print(data.head())
+
+#Stemming -reduce a word to its stem form
+ps = nltk.PorterStemmer()
+
+def stemming(tokenized_text):
+    text = [ps.stem(word) for word in tokenized_text]
+    return text
+
+data['text_stemmed'] = data['text_nostopwords'].apply(lambda x:stemming(x))
+print(data.head())
+
+#Lemmatizing
+#lemmatizing is more accurate than stemming as it uses a dictionary-based approach e.g. Entitling, Entitled->Entitle instead of Entitl
+wn = nltk.WordNetLemmatizer()
+
+def lemmatizing(tokenized_text):
+    text = [wn.lemmatize(word) for word in tokenized_text]
+    return text
+
+data['text_lemmatized'] = data['text_nostopwords'].apply(lambda x:lemmatizing(x))
+print(data.head())
+
+### -------------------- ###
+
+### ---- Vectorizing Data: Bag-Of-Words ---- ###
+import sklearn
+from sklearn.feature_extraction.text import CountVectorizer
+
+count_vect = CountVectorizer()
+X_counts = count_vect.fit_transform(data['text'])	 
+#X_counts = count_vect.fit_transform(data['text'])
+print(X_counts.shape)
+#print(count_vect.get_feature_names())
 
