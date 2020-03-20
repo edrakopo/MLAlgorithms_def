@@ -103,9 +103,23 @@ import string
 data['body_length'] = data['text'].apply(lambda x: len(x)-x.count(" "))
 print(data.head())
 
-#def count_punct(text):
-#    count = sum([1 for ])
+def count_punct(text):
+    count = sum([1 for char in text if char in string.punctuation])
+    return round(count/(len(text) - text.count(" ")), 3)*100.
 
+data['punct%'] = data['text'].apply(lambda x:count_punct(x))
+print(data.head())
 
+#check if features are good or not:
+import numpy as np
+import matplotlib.pyplot as plt
 
+bins = np.linspace(0,200,40)
+#print(data[data['labels']=='0']['body_length'].head())
+
+plt.hist(data[data['labels']=='1']['body_length'], bins, alpha=0.5, density=True, label='spam')
+plt.hist(data[data['labels']=='0']['body_length'], bins, alpha=0.5, density=True, label='ham')
+plt.legend(loc='upper left')
+plt.show()
+#comment: Spams have a high number of words as compared to Hams. So it’s a good feature to distinguish
 
