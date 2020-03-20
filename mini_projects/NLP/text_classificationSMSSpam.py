@@ -72,10 +72,40 @@ print(data.head())
 ### ---- Vectorizing Data: Bag-Of-Words ---- ###
 import sklearn
 from sklearn.feature_extraction.text import CountVectorizer
+import sklearn.feature_extraction.text
 
 count_vect = CountVectorizer()
 X_counts = count_vect.fit_transform(data['text'])	 
 #X_counts = count_vect.fit_transform(data['text'])
 print(X_counts.shape)
 #print(count_vect.get_feature_names())
+
+### ---- Vectorizing Data: N-Grams ---- ###
+from sklearn.feature_extraction.text import CountVectorizer
+
+#ngram_vect = CountVectorizer(ngram_range(2,2),analyzer=clean_text) #It applies only bigram vectorizer
+#X_counts = ngram_vect.fit_transform(data['text']) 
+#print(X_counts.shape)
+
+### ---- Vectorizing Data: TF-IDF ---- ###
+#from sklearn.feature_extraction.text import TfidfVectorizer
+
+#tfidf_vect = TfidfVectorizer(analyzer=clean_text)
+#X_tfidf = tfidf_vect.fit_transform(data['text'])
+#print(X_tfidf.shape)
+#print(tfidf_vect.get_feature_names())
+
+### ---- Feature Engineering: Feature Creation ---- ###
+#create feature for text message length and % of punctuation in text
+import string
+
+#Function to calculate length of message excluding space
+data['body_length'] = data['text'].apply(lambda x: len(x)-x.count(" "))
+print(data.head())
+
+#def count_punct(text):
+#    count = sum([1 for ])
+
+
+
 
